@@ -1569,7 +1569,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
    /* background-color: white; */
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-contact{
         margin-top: 30vh;
     }
@@ -1581,7 +1581,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     /* width: 50vw; */
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-contact p{
         width: 50vw;
     }
@@ -1608,7 +1608,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     /* margin-right: 25%; */
     margin-left: 75%;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-staff > div:nth-child(odd){
         margin-right: 0%;
         margin-left: 50%;
@@ -1620,7 +1620,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     margin-right: 25%;
     margin-left: 50%;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-staff > div:nth-child(even){
         margin-right: 50%;
         margin-left: 0%;
@@ -1633,7 +1633,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     margin-right: 50%;
     margin-left: 25%;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-staff > div:last-child{
         margin-right: 0%;
         margin-left: 50%;
@@ -1653,7 +1653,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     /* width:25vw; */
     height: 56px;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .position-title-block{
         height: 28px;
     }
@@ -1680,12 +1680,12 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     flex:1 1 0px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-faculty-content{
         flex-wrap: wrap;
     }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-faculty-content div{
         /* flex-basis: 50%; */
         flex: auto;
@@ -1718,7 +1718,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: rgb(255, 89, 0);
     color: white;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-faculty-section3{
         order: 99;
     }
@@ -1740,7 +1740,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     height:12.5vw;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-faculty-title-block{
         height: 28px;
         width: 100%;
@@ -1768,7 +1768,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: black;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .about-title-block{
         height: 28px;
         width: 100%;
@@ -1802,13 +1802,13 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: rgb(255, 89, 0);
     /* border-top: 2px solid white; */
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
     .site-content-page-bachelor-about-content{
         margin-left: 0%;
         margin-right: 0%;
-        /* padding-right: 20px;
+        padding-right: 20px;
         padding-left: 20px;
-        padding-top: 20px; */
+        padding-top: 20px;
     }
 }
 
