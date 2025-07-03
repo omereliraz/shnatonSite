@@ -1,0 +1,2268 @@
+/* Meir's Classic CSS Reset */
+
+*, *:before, *:after { 
+    box-sizing: border-box; /* Prevent padding from enlarging elements */
+}
+
+* {
+    margin: 0; /* Remove extra margin from everything (body, headings, etc...) */
+}
+
+img {
+    max-width: 100%; /* Don't let images be more than their container's width */
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word; /*Break long words in headings & paragraphs*/
+    /* font-family: "vc-david", serif; */
+}
+
+ul { /* Don't style unordered lists (good for nav menus!) */
+    padding: 0;
+    list-style: none;
+}
+
+a { /* No blue links! */
+    text-decoration: none;
+    color: inherit;
+    font-size: 2.5ch;
+    padding-right: 7px;
+}
+
+/* end Meir reset */
+
+p, h2, h3{
+    font-size: 2.5ch;
+    padding-right: 7px;
+}
+
+p::selection, h1::selection, h2::selection, h3::selection, a::selection{
+    color: black;
+    background-color: white;
+  }
+
+.wrapper {
+    font-family: "narkiss-tam", sans-serif;
+    overscroll-behavior: none;
+
+}
+
+.site-content{
+    position: relative;
+    overscroll-behavior: none;
+
+}
+
+.site-content-page{
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------- HEADER START --------------------------------- */
+
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    position:sticky;
+    top: 0px;
+    z-index: 500;
+
+    color: white;
+    background-color: black;
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+.site-header > * {
+    /* font-weight: 100;
+    font-size: 2.5ch; */
+}
+
+.site-header > * {
+    flex: 1 1 0px;
+}
+
+.nav-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-beam {
+    /* position: absolute; */
+    width: 100%;
+    height: 0;
+    top: 28px;
+    background-color: yellow;
+    transition: height 0.5s ease-in-out;
+
+}  
+.nav-item:hover .nav-beam {
+    height: 25px;
+}
+
+#opening1{
+    background-color: rgb(195, 155, 255);
+    color:white;
+}    
+
+
+#calendar1{
+    background-color: rgb(0, 64, 255);
+    color:white;
+} 
+
+#tuition1{
+    background-color: rgb(114, 255, 114);
+    color:white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .site-header > * {
+        flex: auto;
+    }
+}
+
+
+
+.site-content-page-header{
+    /* width: 50%; */
+
+
+    position: fixed;
+    top:-150vh;
+    
+    right: 0px;
+    height:100vh;
+    z-index: 100;
+
+    background-color: black;
+
+    transition: top 0.3s ease;
+}
+
+.drop-down{
+    top: calc(0vh + 28px);
+    /* width: 100%; */
+}
+
+.site-content-page-header-title{
+    /* width: 90%; */
+    padding-top: 27px;
+    padding-right: 2.3vw;
+    padding-bottom: 2vw;
+    
+    font-size: 14vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 90%;
+
+    color: rgb(255, 255, 255);
+}
+
+.site-content-page-header-title p{
+    /* width: 100%; */
+    color: white;
+}
+
+.site-content-page-header-body{
+    position: static;
+}
+
+.site-content-page-header-body p{
+    color: black;
+    background-color: white;
+    z-index: 1;
+}
+
+.site-content-page-header-body-0{
+    height: 25vw;
+    width: 25vw;
+
+    /* position: absolute; */
+    
+    background-color: rgb(195, 155, 255);
+
+    /* animation-name: mov0;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse; */
+}
+
+
+
+
+
+@keyframes mov0 {
+    0%   {width: 25vw;left:0vw; top:46vh;}
+    10%  {width: 25vw;width: 24vw;left:75vw; top:46vh;}
+    20%  {width: 24vw;left:75vw; top:25vh;}
+    30%  {width: 25vw;left:0vw; top:25vh;}
+    40%  {width: 25vw;left:0vw; top:46vh;}
+    50%  {width: 25vw;left:0vw; top:25vh;}
+    60%  {width: 25vw;left:25vw; top:25vh;}
+    70%  {width: 25vw;left:25vw; top:0vh;}
+    80%  {width: 25vw;left:50vw; top:0vh;}
+    90%  {width: 25vw;left:50vw; top:46vh;}
+    100% {width: 24vw;left:75vw; top:46vh;}
+}
+
+.site-content-page-header-body-1{
+    height: 25vw;
+    width: 25vw;
+
+    position: absolute;
+    top: 5vh;
+    left: 70vw;
+    background-color: rgb(0, 64, 255);
+
+    /* animation-name: mov1;
+    animation-duration: 40s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate; */
+}
+
+@keyframes mov1 {
+    0%   {width: 25vw;left:25vw; top:46vh;}
+    10%  {width: 24vw;left:75vw; top:46vh;}
+    20%  {width: 24vw;left:75vw; top:25vh;}
+    30%  {width: 25vw;left:0vw; top:25vh;}
+    40%  {width: 25vw;left:0vw; top:46vh;}
+    50%  {width: 25vw;left:0vw; top:25vh;}
+    60%  {width: 25vw;left:25vw; top:25vh;}
+    70%  {width: 25vw;left:25vw; top:0vh;}
+    80%  {width: 25vw;left:50vw; top:0vh;}
+    90%  {width: 25vw;left:50vw; top:46vh;}
+    100% {width: 24vw;left:75vw; top:46vh;}
+}
+
+.site-content-page-header-body-2{
+    height: 25vw;
+    width: 25vw;
+
+    position: absolute;
+    top: 45vh;
+    left: 60vw;
+
+    background-color: rgb(114, 255, 114);
+
+    /* animation-name: mov2;
+    animation-duration: 41s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate; */
+}
+
+@keyframes mov2 {
+    0%   {width: 25vw;left:5vw; top:46vh;}
+    10%  {width: 25vw;left:25vw; top:46vh;}
+    20%  {width: 25vw;left:25vw; top:25vh;}
+    30%  {width: 25vw;left:0vw; top:25vh;}
+    40%  {width: 25vw;left:0vw; top:46vh;}
+    50%  {width: 25vw;left:0vw; top:25vh;}
+    60%  {width: 24vw;left:75vw; top:25vh;}
+    70%  {width: 24vw;left:75vw; top:0vh;}
+    80%  {width: 25vw;left:0vw; top:0vh;}
+    90%  {width: 25vw;left:0vw; top:46vh;}
+    100% {width: 25vw;left:5vw; top:46vh;}
+}
+
+.site-content-page-header-body-3{
+    height: 25vw;
+    width: 25vw;
+
+    position: absolute;
+    top: 35vh;
+    left: 5vw;
+
+    background-color: gold;
+
+    /* animation-name: mov3;
+    animation-duration: 39s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse; */
+
+}
+
+@keyframes mov3 {
+    0%   {width: 25vw;left:5vw; top:46vh;}
+    10%  {width: 25vw;left:25vw; top:46vh;}
+    20%  {width: 25vw;left:25vw; top:25vh;}
+    30%  {width: 25vw;left:0vw; top:25vh;}
+    40%  {width: 25vw;left:0vw; top:46vh;}
+    50%  {width: 25vw;left:0vw; top:25vh;}
+    60%  {width: 24vw;left:75vw; top:25vh;}
+    70%  {width: 24vw;left:75vw; top:0vh;}
+    80%  {width: 25vw;left:0vw; top:0vh;}
+    90%  {width: 25vw;left:0vw; top:46vh;}
+    100% {width: 25vw;left:5vw; top:46vh;}
+}
+
+.site-content-page-header-body-4{
+    height: 25vw;
+    width: 25vw;
+    
+    
+    position: absolute;
+    top: 25vh;
+    left: 30vw;
+    
+    background-color: tomato;
+
+    /* animation-name: mov4;
+    animation-duration: 42s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate; */
+}
+
+@keyframes mov4 {
+    0%   {width: 25vw;left:0vw; top:0vh;}
+    10%  {width: 25vw;left:25vw; top:0vh;}
+    20%  {width: 25vw;left:25vw; top:46vh;}
+    30%  {width: 25vw;left:0vw; top:46vh;}
+    40%  {width: 25vw;left:0vw; top:25vh;}
+    50%  {width: 25vw;left:50vw; top:25vh;}
+    60%  {width: 25vw;left:50vw; top:0vh;}
+    70%  {width: 25vw;left:0vw; top:0vh;}
+    80%  {width: 25vw;left:0vw; top:46vh;}
+    90%  {width: 24vw;left:75vw; top:46vh;}
+    100% {width: 24vw;left:75vw; top:0vh;}
+}
+
+.site-content-page-header-body-5{
+    height: 25vw;
+    width: 25vw;
+    
+    position: absolute;
+    top: 5vh;
+    left: 15vw;
+    
+    background-color: darkcyan;
+
+    /* animation-name: mov5;
+    animation-duration: 45s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse; */
+}
+
+@keyframes mov5 {
+    0%   {width: 25vw;left:0vw; top:0vh;}
+    10%  {width: 25vw;left:25vw; top:0vh;}
+    20%  {width: 25vw;left:25vw; top:46vh;}
+    30%  {width: 24vw;left:75vw; top:46vh;}
+    40%  {width: 24vw;left:75vw; top:25vh;}
+    50%  {width: 25vw;left:50vw; top:25vh;}
+    60%  {width: 25vw;left:50vw; top:0vh;}
+    70%  {width: 25vw;left:0vw; top:0vh;}
+    80%  {width: 25vw;left:0vw; top:46vh;}
+    90%  {width: 24vw;left:75vw; top:46vh;}
+    100% {width: 24vw;left:75vw; top:0vh;}
+
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .site-header a{
+        display: none;
+    }
+}
+
+
+/* -------------------------------- HEADER END ---------------------------------- */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* ------------------------------- OPENING START -------------------------------- */
+
+
+.site-content-page-opening{
+    position: fixed;
+    top: 29px;
+    z-index: -2;
+    overscroll-behavior: none;
+}
+
+/* background text */
+.site-content-page-opening-title{
+    display: flex;
+    height: calc(100vh - 28px);
+    padding-right: 2.3vw;
+    padding-bottom: 2.3vw;
+    
+    font-size: 15vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 90%;
+
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.site-content-page-opening-title p{
+    align-self: flex-end;
+}
+
+
+.site-content-page-opening-disclaimer{
+    /* margin-top: calc(-100vh + 28px); */
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding-left: 15vw;
+}
+
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-disclaimer {
+        height: 30px;
+        /* overflow: hidden; */
+    }
+}
+
+.site-content-page-opening-contents{   
+    direction: ltr;
+
+}
+
+.site-content-page-opening-contents-title{
+    position: sticky;
+    top: 28px;
+
+    background-color: white;
+
+}
+
+
+.site-content-page-opening-contents-items {
+    /* margin-right: -30vw; */
+    /* height: 0vw; */
+    transition: width ease-in-out 0.5s;
+    width: 25vw;
+    /* height: 25vw; */
+    direction: rtl;
+    /* color: gray; */
+    display: flex;
+    flex-direction: column;
+    /* white-space: nowrap; */
+    margin-bottom:calc(100vh - 364px);
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-contents-items {
+        width:100%;
+    }
+}
+
+.site-content-page-opening-contents-items p{
+    color: black;
+    background-color: white;
+    border-top: 2px solid black;
+    transition: padding 0.1s ease-in-out,  color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.site-content-page-opening-contents-items p:hover{
+    background-color: black;
+    color: white;
+    padding-right: 15px;
+}
+
+
+.site-content-page-opening-body-divider0{
+    margin-top: 100vh;
+    position: sticky;
+    top: 29px;
+    z-index: -1;
+}
+
+.site-content-page-opening-body-divider0-title{
+    padding-top: 11vw;
+    height: 100vh;
+    padding-right: 2.3vw;
+    padding-bottom: 2vw;
+    
+    font-size: 15vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 90%;
+
+    background-color: rgb(195, 155, 255);
+    
+    color: rgb(255, 255, 255);
+}
+
+.site-content-page-opening-body-divider1{
+    position: sticky;
+    top: 29px;
+    z-index: -1;
+}
+
+.site-content-page-opening-body-divider1-title{
+    padding-top: 11vw;
+    height: 100vh;
+    padding-right: 2.3vw;
+    padding-bottom: 2vw;
+    
+    font-size: 15vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 90%;
+
+    background-color: rgb(93, 185, 88);
+    color: rgb(255, 255, 255);
+}
+
+.site-content-page-opening-body-divider2{
+    position: sticky;
+    top: 29px;
+    z-index: -1;
+}
+
+.site-content-page-opening-body-divider2-title{
+    padding-top: 11vw;
+    height: 100vh;
+    /* width:100vw; */
+    padding-right: 2.3vw;
+    padding-bottom: 2vw;
+    
+    font-size: 15vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 90%;
+
+    background-color: rgb(255, 121, 72);
+    
+    color: rgb(255, 255, 255);
+}
+
+.site-content-page-opening-body-positions-title{
+    position: sticky;
+    top: 28px;
+    direction: ltr;    
+}
+.site-content-page-opening-body-positions-title p{
+
+    width: 25vw;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    padding-left: 7px;
+
+}
+
+.site-content-page-opening-body-positions-body{
+    display: flex;
+}
+
+.positions-section1{
+    flex:1;
+}
+
+.site-content-page-opening-body-positions-body-administration{
+    margin-bottom: 12.5vw;
+}
+
+.site-content-page-opening-body-positions-body-administration-title {
+    position: sticky;
+    top: 56px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.site-content-page-opening-body-positions-body-administration-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-administration-items p:nth-child(even){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-administration-items p:nth-child(odd){
+    background-color:white;
+    color:rgb(195, 155, 255);
+}
+
+
+.site-content-page-opening-body-positions-body-loyalists-title{
+    position: sticky;
+    top: 56px;
+    display: flex;
+    align-items: flex-end;
+}
+.site-content-page-opening-body-positions-body-loyalists-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-loyalists-items p:nth-child(even){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-loyalists-items p:nth-child(odd){
+    background-color:white;
+    color:rgb(195, 155, 255);}
+    
+.site-content-page-opening-body-positions-body-academicpositions{
+    margin-bottom: 15vw;
+}
+.site-content-page-opening-body-positions-body-academicpositions-title{
+    position: sticky;
+    top: 56px;
+    
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.site-content-page-opening-body-positions-body-academicpositions-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-academicpositions-items p:nth-child(odd){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-academicpositions-items p:nth-child(even){
+    background-color:white;
+    color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-advancedheads{
+    margin-bottom: 10vw;
+    
+}
+
+.site-content-page-opening-body-positions-body-advancedheads-title{
+    position: sticky;
+    top: 56px;
+    /* height:0px; */
+    position: sticky;
+    top: 56px;
+    display: flex;
+    align-items: flex-end;
+    /* margin-top: 10vw; */
+}
+
+.site-content-page-opening-body-positions-body-advancedheads-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-advancedheads-items p:nth-child(odd){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-advancedheads-items p:nth-child(even){
+    background-color:white;
+    color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-mainheads{
+    margin-bottom: 10vw;
+}
+
+.site-content-page-opening-body-positions-body-mainheads-title{
+    position: sticky;
+    top: 56px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.site-content-page-opening-body-positions-body-mainheads-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-mainheads-items p:nth-child(odd){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-mainheads-items p:nth-child(even){
+    background-color:white;
+    color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-administrative{
+    margin-bottom: 10vw;
+}
+
+.site-content-page-opening-body-positions-body-administrative-title{
+    position: sticky;
+    top: 56px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.site-content-page-opening-body-positions-body-administrative-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-administrative-items p:nth-child(even){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-administrative-items p:nth-child(odd){
+    background-color:white;
+    color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-pastpresidents{
+    margin-bottom: 10vw;
+}
+
+.site-content-page-opening-body-positions-body-pastpresidents-title{
+    position: sticky;
+    top: 56px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.site-content-page-opening-body-positions-body-pastpresidents-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-pastpresidents-items p:nth-child(odd){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-pastpresidents-items p:nth-child(even){
+    background-color:white;
+    color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-pastheads{
+    margin-bottom: 10vw;
+}
+
+.site-content-page-opening-body-positions-body-pastheads-title{
+    position: sticky;
+    top: 56px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.site-content-page-opening-body-positions-body-pastheads-title p{
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-opening-body-positions-body-pastheads-items p:nth-child(odd){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-positions-body-pastheads-items p:nth-child(even){
+    background-color:white;
+    color:rgb(195, 155, 255);
+}
+
+
+
+.positions-section2{
+    flex:1;
+}
+
+.positions-section3{
+    flex:1;
+}
+
+.positions-section4{
+    flex:1;
+}
+
+.site-content-page-opening-body-positions-body div{
+    /* background-color: rgb(31, 31, 31); */
+    color:white;
+}
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.site-content-page-opening-body-academicplans-body-intro{
+    position: relative;
+    border: solid 2px black;
+    width: 25vw;
+}
+
+.site-content-page-opening-body-academicplans{
+    color: black;
+    /* font-weight: 600; */
+    /* background-color: rgb(195, 155, 255); */
+}
+
+.site-content-page-opening-body-academicplans-title{
+    position: sticky;
+    top: 28px;
+    direction: ltr;
+    /* height: 25vw; */
+    
+}
+.site-content-page-opening-body-academicplans-title p{
+    /* direction: rtl; */
+    /* height: 12.5vw; */
+    width: 25vw;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    padding-left: 7px;
+    /* border-top: 2px solid black; */
+    /* background-color: white; */
+}
+
+.site-content-page-opening-body-academicplans-body{
+    /* display: flex; */
+    margin-left: 25vw;
+
+}
+
+.site-content-page-opening-body-academicplans-body div{
+}
+
+.site-content-page-opening-body-academicplans-body > * > *{
+    position: sticky;
+    top: 56px;
+    z-index:21;
+
+}
+
+
+.site-content-page-opening-body-academicplans-body > * > * p{
+    background-color: black;    
+    z-index:21;
+    color: white;
+}
+
+.site-content-page-opening-body-academicplans-body > * > * + * p:nth-child(odd){
+    background-color:rgb(93, 185, 88);
+    color: white;
+    padding-left: 15vw;
+    margin-right: 25vw;
+    z-index: 1;
+}
+
+.site-content-page-opening-body-academicplans-body > * > * + * p:nth-child(even){
+    background-color:white;
+    color: rgb(93, 185, 88);
+    padding-left: 15vw;
+    margin-right: 25vw;
+
+}
+
+.site-content-page-opening-body-academicplans-body-intro{
+    border: solid 2px black;
+    width: 25vw;
+}
+
+.site-content-page-opening-body-academicplans-body-intro p{
+    /* position: relative; */
+    
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+
+.site-content-page-opening-body-administration{
+    color: black;
+    /* font-weight: 600; */
+    /* background-color: rgb(195, 155, 255); */
+}
+
+.site-content-page-opening-body-administration-title{
+    position: sticky;
+    top: 28px;
+    direction: ltr;
+    /* height: 25vw; */
+    
+}
+.site-content-page-opening-body-administration-title p{
+    /* direction: rtl; */
+    /* height: 12.5vw; */
+    width: 25vw;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    padding-left: 7px;
+    /* border-top: 2px solid black; */
+    /* background-color: white; */
+}
+
+.site-content-page-opening-body-administration-body{
+    /* display: flex; */
+    margin-left: 25vw;
+
+}
+
+.site-content-page-opening-body-administration-body div{
+}
+
+
+.site-content-page-opening-body-administration-body > * > *{
+    position: sticky;
+    top: 56px;
+    z-index:21;
+    
+
+}
+
+.site-content-page-opening-body-administration-body > * > * + *{
+    z-index:21;
+    min-height: 12.5vw;;
+
+}
+
+
+.site-content-page-opening-body-administration-body > * > * p{
+    background-color: black;    
+    z-index:21;
+    color: white;
+}
+
+.site-content-page-opening-body-administration-body > * > * + * p:nth-child(odd){
+    background-color:rgb(255, 121, 72);
+    color: white;
+    padding-left: 15vw;
+    margin-right: 25vw;
+    z-index: 1;
+}
+
+.site-content-page-opening-body-administration-body > * > * + * p:nth-child(even){
+    background-color:white;
+    color: rgb(255, 121, 72);
+    /* color: rgb(93, 185, 88); */
+    padding-left: 15vw;
+    margin-right: 25vw;
+
+}
+
+.site-content-page-opening-body-administration-body-intro{
+    width: 25vw;
+    border: 2px solid black;
+}
+
+
+/* .site-content-page-opening-body-academicplans-body-pastheads-items p:nth-child(odd){
+    background-color:rgb(195, 155, 255);
+}
+
+.site-content-page-opening-body-academicplans-body-pastheads-items p:nth-child(even){
+    background-color:white;
+    color:rgb(195, 155, 255);
+} */
+
+/* -------------------------------- OPENING END ---------------------------------- */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* ------------------------------- CALENDAR START -------------------------------- */
+
+
+.site-content-page-calendar{
+    position: relative;
+    color: white;
+}
+
+/* background text */
+.site-content-page-calendar-text{
+    position: sticky;
+
+    height: 100vh;
+    margin-top: -5px;
+    /* margin-left: -7px; */
+    top: 28px;
+    text-align: left;
+
+    font-size: 16vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 90%;
+    z-index: 0;
+
+    color: white;
+    background-color: gainsboro;
+}
+
+/* background text */
+.site-content-page-calendar-text p{
+    position: absolute;
+
+}
+
+.site-content-page-calendar-content{
+    position: relative;
+}
+
+.site-content-page-calendar-year{
+    margin-top: -100vh;
+    position:sticky;
+    top: 28px;
+    display: flex;
+    color: blue;
+
+    z-index: 5;
+}
+
+.site-content-page-calendar-year-title{
+}
+
+.site-content-page-calendar-year-text{
+}
+
+.site-content-page-calendar-semesters{
+}
+
+.div-a{
+    border-top: 2px solid red;
+}
+
+.site-content-page-calendar-semesters-a{
+    position: sticky;
+    top: 28px;
+    z-index: 4;
+}
+
+.site-content-page-calendar-semesters-a-title{
+    display: flex;
+    color: red;
+}
+
+.site-content-page-calendar-semesters-eventsa{
+    display: flex;
+    color: black;
+    /* padding-bottom: 15vw; */
+}
+
+.site-content-page-calendar-semesters-eventsa-title{
+    position: sticky;
+    top: 28px;
+    display: flex;
+    height: 0px;
+}
+
+.site-content-page-calendar-semesters-eventsa-events{
+    border-top: 2px solid black;
+    flex-grow: 1;
+    z-index: 5;
+    /* background-color: aliceblue; */
+}
+
+
+.site-content-page-calendar-eventsa{
+    position: relative;
+    display: flex;
+    color: black;
+}
+
+.div-b{
+    border-top: 2px solid rgb(114, 255, 114);
+}
+
+.site-content-page-calendar-semesters-b{
+    position: sticky;
+    top: 28px;
+    z-index: 4;
+}
+
+.site-content-page-calendar-semesters-b-title{
+    display: flex;
+    color: rgb(114, 255, 114);
+}
+
+.site-content-page-calendar-semesters-eventsb{
+    display: flex;
+    color: black;
+    /* padding-bottom: 15vw; */
+}
+
+.site-content-page-calendar-semesters-eventsb-title{
+    position: sticky;
+    top: 28px;
+    display: flex;
+    height: 0px;
+    color: magenta;
+}
+
+.site-content-page-calendar-semesters-eventsb-events{
+    border-top: 2px solid black;
+    color: black;
+    flex-grow: 1;
+    z-index: 5;
+
+}
+
+.event{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 2px solid black;
+    /* background-color: white; */
+    padding-right: 0px;
+    transition: padding-right 0.5s, background-color 0.1s;
+}
+
+.event:hover{
+    
+    background-color: white;
+    padding-right: 7px;
+}
+
+.event p{
+    /* border-left: 0px solid red; */
+    /* text-align: left; */
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    flex:3;
+    font-weight: 500;
+}
+
+.event p + p{
+    /* border-left: 100px solid yellow; */
+    /* background-color: yellow; */
+    text-align: left;
+    flex-grow: 1;
+    flex:2;
+    font-weight: 700;
+}
+
+
+.blank-block{
+    width: 15vw;
+    height: 15vw;
+}
+
+.white-block{
+    width: 15vw;
+    height: 15vw;
+    background-color: white;
+}
+
+.magenta-block{
+    width: 15vw;
+    height: 15vw;
+    background-color: rgb(114, 255, 114);
+}
+
+.blue-block{
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+    background-color: rgb(0, 64, 255);
+}
+
+.yellow-block{
+
+    width: 15vw;
+    height: 15vw;
+    background-color: red;
+}
+
+.red-block{
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+    background-color: rgb(255, 89, 0);
+}
+
+.black-block{
+    top: 45px;
+    width: 15vw;
+    height: 15vw;
+    background-color: black;
+}
+
+
+
+/* -------------------------------- CALENDAR END ---------------------------------- */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* ------------------------------- TUITION START -------------------------------- */
+
+
+.site-content-page-tuition{
+    position: relative;
+}
+
+/* background text */
+.site-content-page-tuition-title{
+    position: sticky;
+    top: 45px;
+    padding-right: 2.3vw;
+    padding-bottom: 2vw;
+    
+    font-size: 15vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 90%;
+    z-index: 0;
+
+    color: rgb(114, 255, 114);
+}
+
+.border-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link-border{
+    /* float: left; */
+    height:1.5px;
+    width: 41vw;
+    /* align:left; */
+    /* direction: rtl; */
+    /* background-color: rgb(0, 64, 255); */
+    z-index: -1;
+}
+
+.site-content-page-tuition-links{
+    position: sticky;
+    top: 45px;
+    
+    direction: ltr;
+    justify-content: end;
+    align-items: stretch;
+    align-content: stretch;
+    
+}
+
+.site-content-page-tuition-links-title {
+    /* background-color: white; */
+    width: 30vw;
+    background-color: rgb(114, 255, 114);
+
+    color: rgb(0, 64, 255);
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.site-content-page-tuition-links-title {
+    /* background-color: white; */
+}
+
+.site-content-page-tuition-links-phone-blank-block{
+    width: 15vw;
+}
+
+
+.site-content-page-tuition-links-phone{
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    /* z-index: 5; */
+    /* white-space: nowrap; */
+    
+}
+
+.site-content-page-tuition-links-phone-title{
+    border-top: 2px solid rgb(255, 89, 0);
+    padding-left: 7px;
+    font-weight: 500;
+    color: rgb(255, 89, 0);
+    background-color: white;
+}
+
+
+.site-content-page-tuition-links-phone-text{
+    /* width: 15vw; */
+    display: flex;
+    flex-direction: column-reverse;
+    direction: rtl;
+
+    font-weight: 500;
+    color: white;
+    background-color: rgb(255, 89, 0);
+}
+
+.site-content-page-tuition-links-phone-text p{
+    width: 15vw;
+    padding-right: 7px;
+    padding-bottom: 3px;
+    color: white;
+    
+
+    background-color: rgb(255, 89, 0);
+    /* z-index: 6; */
+}
+
+.site-content-page-tuition-links-1{
+    /* z-index: 6; */
+}
+
+.site-content-page-tuition-links-2{
+    /* z-index: 6; */
+}
+
+.site-content-page-tuition-links-3{
+    /* z-index: 6; */
+}
+
+
+.site-content-page-tuition-links-email{
+    display: flex;
+    justify-content: flex-end;
+    /* flex-direction: row-reverse; */
+    direction: rtl;
+
+    font-weight: 500;
+    color:  white;
+    /* z-index: 5; */
+}
+
+.site-content-page-tuition-links-email p{
+    padding-right: 7px;
+    padding-left: 7px;
+    /* width: 30vw; */
+    color:rgb(0, 64, 255);
+    border-top: 2px solid rgb(0, 64, 255);
+}
+
+.site-content-page-tuition-links-email p+p{
+    padding-right: 7px;
+    width: 30vw;
+    color:  white;
+    background-color:rgb(0, 64, 255);
+}
+
+.site-content-page-tuition-links-aid{
+    direction: rtl;
+    width: 30vw;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    color: white;
+    background-color: rgb(255, 89, 0);
+    transition: background-color 0.2s, color 0.2s, padding-right 0.5s;
+    z-index: 1;
+}
+
+.site-content-page-tuition-links-aid:hover{
+    padding-right: 15px;
+    color: rgb(255, 89, 0);
+    background-color: white;
+}
+
+.site-content-page-tuition-text{
+    margin-top: -40vh;
+    position: relative;
+}
+
+.site-content-page-tuition-text-title{
+    position: sticky;
+    top: 45px;
+    width:15vw;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    font-weight: 700;
+    line-height: 160%;
+    color: white;
+    background-color: black;
+}
+
+.site-content-page-tuition-text-body{
+    padding-right: 15.5vw;
+    padding-left: 0.5vw;
+    /* padding-top: 30px; */
+    width: 55vw;
+
+    font-weight: 500;
+    border-top: 2px solid black;
+    color: black;
+    background-color: white;
+
+    /* background-color: red; */
+}
+
+
+.site-content-page-tuition-text-body p{
+    padding-bottom: 15px;
+}
+
+.site-content-page-tuition-more{position: sticky;
+    bottom: 0;
+    justify-content: end;
+    /* padding-right: 55vw; */
+    display: flex;
+    color: white;
+}
+
+.site-content-page-tuition-more-degree{
+    width: 15vw;
+}
+
+.site-content-page-tuition-more-degree-title{
+    width: 15vw;
+    /* height: 15vw; */
+    border-top: 2px solid rgb(255, 89, 0);
+    color: rgb(255, 89, 0);
+    background-color: white;
+}
+
+.site-content-page-tuition-more-degree-text p{
+    width: 15vw;
+    padding-right: 7px;
+    /* height: 15vw; */
+    color: white;
+    background-color: rgb(255, 89, 0);
+    transition: background-color 0.2s, color 0.2s, padding-right 0.5s;
+
+}
+
+.site-content-page-tuition-more-degree-text p:hover{
+    padding-right: 15px;
+    background-color: white;
+    color: rgb(255, 89, 0);
+}
+
+.site-content-page-tuition-more-forms{
+    width: 15vw;
+}
+
+.site-content-page-tuition-more-forms-title{
+    width: 15vw;
+    /* height: 15vw; */
+    border-top: 2px solid rgb(0, 64, 255);
+    color: rgb(0, 64, 255);
+    background-color: white;
+}
+
+.site-content-page-tuition-more-forms-text{
+    width: 15vw;
+    padding-right: 7px;
+    /* height: 15vw; */
+    color: white;
+    background-color: rgb(0, 64, 255);
+    transition: background-color 0.2s, color 0.2s, padding-right 0.5s;
+
+}
+
+.site-content-page-tuition-more-forms-text:hover{
+    padding-right: 15px;
+    background-color: white;
+    color: rgb(0, 64, 255);
+}
+
+.site-content-page-tuition-links-4{
+    display: flex;
+    /* height: 31px; */
+    width: 30vw;
+}
+
+.site-content-page-tuition-links-4-block1{
+    width: 15vw;
+    height: 31px;
+    height: 7.5vw;
+    background-color: rgb(0, 64, 255);
+}
+
+.site-content-page-tuition-links-4-block2{
+    height: 31px;
+    width: 15vw;
+    height: 7.5vw;
+    background-color: white;
+    
+}
+
+.site-content-page-tuition-links-5{
+    display: flex;
+    /* height: 31px; */
+    width: 30vw;
+    
+    /* z-index: 66; */
+}
+
+.site-content-page-tuition-links-5-block1{
+    width: 15vw;
+    height: 31px;
+    background-color: white;
+    
+}
+
+.site-content-page-tuition-links-5-block2{
+    /* height: 31px; */
+    width: 15vw;
+    height: 15vw;
+    background-color: rgb(255, 89, 0);
+}
+
+/* -------------------------------- TUITION END --------------------------------- */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* ----------------------------- FIRST DEGREE START ----------------------------- */
+
+
+
+.site-content-page-bachelor{
+    position: relative;
+}
+
+/* background text */
+.site-content-page-bachelor-title{
+    position: fixed;
+    top: 29px;
+    z-index: -2;
+
+    padding-top: 5px;
+    display: flex;
+    height: 100vh;
+    width:100vw;
+    padding-right: 2.3vw;
+    padding-bottom: 2vw;
+    
+    font-size: 15vw;
+    letter-spacing: -0.1em;
+    font-weight: 800;
+    line-height: 92%;
+
+    background-color: white;
+    color: rgb(255, 89, 0);
+}
+
+.site-content-page-bachelor-title p{
+    /* align-self: flex-end; */
+    /* position: sticky;
+    top:50px; */
+    /* bottom: 5px; */
+}
+
+
+.site-content-page-bachelor-contact{
+    position: sticky;
+    top: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+
+    /* left:0px; */
+    /* width: 100vw; */
+    margin-top: 48vh;
+   /* background-color: white; */
+}
+
+.site-content-page-bachelor-contact p{
+    width: 25vw;
+    background-color: white;
+    color: rgb(255, 89, 0);
+}
+
+#contacttitle{
+    border-top: 28px solid black;
+    background-color: rgb(255, 89, 0);
+    color: white;
+}
+
+.site-content-page-bachelor-staff{
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content-page-bachelor-staff div{
+    position: sticky;
+    top: 28px;
+}
+
+.site-content-page-bachelor-staff > div:nth-child(even){
+    /* flex: 1 1 0px; */
+    margin-right: 25%;
+    margin-left: 50%;
+}
+
+.site-content-page-bachelor-staff > div:nth-child(odd){
+    /* flex: 1 1 0px; */
+    /* margin-right: 25%; */
+    margin-left: 75%;
+}
+
+.site-content-page-bachelor-staff > div:last-child{
+    /* flex: 1 1 0px; */
+    margin-right: 50%;
+    margin-left: 25%;
+}
+
+.site-content-page-bachelor-staff div p{
+    /* width:25vw; */
+    background-color: rgb(255, 89, 0);
+    color: white;
+    /* margin-right: 25vw; */
+}
+
+.position-title-block{
+    background-color: black;
+    color: white;
+    /* width:25vw; */
+    height: 56px;
+}
+
+#position-title{
+    /* width:25vw; */
+    color: black;
+    background-color: white;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    /* height:12.5vw; */
+}
+
+.site-content-page-bachelor-faculty-content{
+    /* padding-right: 10vw; */
+    display: flex;
+    /* width: 100vw; */
+    color:  rgb(255, 89, 0);
+    background-color: white;
+}
+
+.site-content-page-bachelor-faculty-content div{
+    flex:1 1 0px;
+}
+
+.site-content-page-bachelor-faculty-section1 :nth-child(even){
+    /* width: 25vw; */
+    /* padding-bottom:28px; */
+    /* border-top: white solid 2px; */
+    background-color: rgb(255, 89, 0);
+    color: white;
+}
+
+
+.site-content-page-bachelor-faculty-section2 :nth-child(odd){
+    /* width: 25vw; */
+    /* padding-bottom:28px; */
+    /* border-top: white solid 2px; */
+    background-color: rgb(255, 89, 0);
+    color: white;
+}
+
+
+.site-content-page-bachelor-faculty-section3 :nth-child(even){
+    /* width: 25vw; */
+    /* padding-bottom:28px; */
+    /* border-top: white solid 2px; */
+    background-color: rgb(255, 89, 0);
+    color: white;
+}
+
+
+.site-content-page-bachelor-faculty-section4 :nth-child(odd){
+    /* width: 25vw; */
+    /* padding-bottom:28px; */
+    /* border-top: white solid 2px; */
+    background-color: rgb(255, 89, 0);
+    color: white;
+}
+
+.site-content-page-bachelor-faculty-title-block{
+    background-color: black;
+    color: white;
+    width: 25vw;
+    height:12.5vw;
+}
+
+.site-content-page-bachelor-faculty-title-text{
+    position: sticky;
+    top:28px;
+    color: black;
+    background-color: white;
+    /* position: absolute;
+    bottom: 0px; */
+    /* color: white; */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.about-title-block{
+
+    height: 25vw;
+    width: 25%;
+    background-color: black;
+}
+
+#about-title{
+    /* padding-right: none;
+    padding-left: none; */
+    
+
+
+    /* border-top: 28px solid black; */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: black;
+    background-color:white
+}
+
+
+.site-content-page-bachelor-about-title{
+    position: sticky;
+    top: 28px;
+}
+
+.site-content-page-bachelor-about-content{
+    margin-left: 25%;
+    margin-right: 25%;
+
+    color: white;
+    background-color: rgb(255, 89, 0);
+    /* border-top: 2px solid white; */
+}
+
+
+.site-content-page-bachelor-about-content p{
+    padding-right:12px;
+    padding-left:12px;
+    padding-top:7px;
+    max-width: 65ch;
+}
+.site-content-page-bachelor-about-content p + p{
+    padding-top:20px;
+}
+
+.site-content-page-bachelor-about-content :last-child {
+    padding-bottom: 7px;
+}
+
+
+
+.site-content-page-bachelor-academicplan div div{
+    position: sticky;
+    top: 56px;
+    z-index: -1;
+    width: 25%;
+    /* height:25vw; */
+    background-color: black;
+    color: white;
+}
+
+.site-content-page-bachelor-academicplan div div + div{
+    width: auto;
+    margin-right: 25%;
+    margin-left: 25%;
+    /* width:50vw; */
+    /* max-width: 70ch; */
+    /* height: auto; */
+    background-color:  rgb(255, 89, 0);
+    color:white
+}
+
+.site-content-page-bachelor-academicplan div div + div p:nth-child(even){
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 12px;
+    padding-left: 12px;
+    max-width: 65ch;
+    /* color: blue; */
+    /* color:  rgb(255, 89, 0);
+    background-color:white */
+}
+
+.site-content-page-bachelor-academicplan div div + div p:nth-child(odd){
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 12px;
+    padding-left: 12px;
+    max-width: 65ch;
+    /* color: blue; */
+    background-color:  rgb(255, 89, 0);
+    color:white
+}
+
+#academicplan-subtitle{
+    color:  rgb(255, 89, 0);
+    background-color:white
+    /* font-weight: 600; */
+    /* background-color: blue; */
+    /* background-color: white;
+    color:  rgb(255, 89, 0); */
+}
+
+
+
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXXOXOXOXOXOOX SCHEDULE XOXOXOXOXOXOXOXOXXOXOOXOXOXOXOXOXOXOX */
+
+.site-content-page-bachelor-schedule-title{
+    position: sticky;
+    top: 28px;
+    z-index: 3;
+}
+
+.schedule-title-block{
+    background-color: black;
+    color: white;
+    width: 25%;
+    height: 25vw;
+}
+
+.site-content-page-bachelor-schedule-title-title p{   
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: black;
+    background-color:white 
+}
+
+.site-content-page-bachelor-schedule-title-title{
+    background-color: black;
+    color: white; 
+}
+
+.site-content-page-bachelor-schedule-title-content{
+    margin-right: 25vw;
+    display: flex;
+    background-color: black;
+    color: white; 
+}
+
+
+.site-content-page-bachelor-schedule-title-content p{
+    flex: 1 1 0px;
+}
+
+
+
+
+
+.site-content-page-bachelor-schedule-content-yeara-semestera-classa-title{
+    background-color: black;
+    color: white;
+    width: 25vw;
+    position: sticky;
+    top: 59px;
+    z-index: 1;
+    /* height: 12.5vw; */
+}
+.site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div{
+    display: flex;
+    background-color: transparent;
+    border-top: 2px solid black;
+}
+.site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div p:first-child{
+    direction: ltr;
+    padding-left: 7px;
+    width: 25vw;
+}
+.site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div p + p{
+    flex: 1 1 0px;
+    background-color: white;
+    /* background-color: rgb(255, 89, 0); */
+    color: black;
+    transition: background-color 0.1s;
+}
+
+.site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div p + p:hover{
+    background-color: white;
+}
+
+
+
+.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-title{
+    background-color: black;
+    color: white;
+    width: 25vw;
+    position: sticky;
+    top: 59px;
+    z-index: 1;
+    /* height: 12.5vw; */
+}
+.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div{
+    display: flex;
+    background-color: transparent;
+    border-top: 2px solid black;
+
+}
+.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div p:first-child{
+    direction: ltr;
+    padding-left: 7px;
+    width: 25vw;
+}
+.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div p + p{
+    flex: 1 1 0px;
+    background-color: white;
+    color: black;
+}
+
+
+.site-content-page-bachelor-schedule-content-yearb-semestera-classa-title{
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 59px;
+    z-index: 1;
+    width: 25vw;
+    /* height: 12.5vw; */
+}
+.site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div{
+    display: flex;
+    background-color: transparent;
+    border-top: 2px solid black;
+
+}
+.site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div p:first-child{
+    direction: ltr;
+    padding-left: 7px;
+    width: 25vw;
+}
+.site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div p + p{
+    flex: 1 1 0px;
+    background-color: white;
+    color: black;
+}
+
+
+.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-title{
+    background-color: black;
+    color: white;
+    width: 25vw;
+    position: sticky;
+    top: 59px;
+    z-index: 1;
+    /* height: 12.5vw; */
+}
+.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div{
+    display: flex;
+    background-color: transparent;
+    border-top: 2px solid black;
+
+}
+.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div p:first-child{
+    direction: ltr;
+    padding-left: 7px;
+    width: 25vw;
+}
+.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div p + p{
+    flex: 1 1 0px;
+    background-color: white;
+    color: black;
+}
+
+
+#empty-schedule-block{
+    background-color: transparent;
+}
+
+
+
+.site-content-page-bachelor-schedule-content-yearcd-semestera-title{
+    position: sticky;
+    top: 59px;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    width: 25vw;
+    
+    
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-title{
+    position: sticky;
+    top: 87px;
+    z-index: 1;
+    padding-left: 7px;
+    direction: ltr;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    
+    width:25vw;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content{
+    display: flex;
+    margin-right: 25vw;
+    background-color: transparent;
+    color: black;
+    
+    
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content div{
+    flex: 1 1 0px;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content div p{
+    border-top: 2px solid black;
+    background-color: white;
+
+}
+
+
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-title{
+    position: sticky;
+    top: 87px;
+    z-index: 1;
+    padding-left: 7px;
+    direction: ltr;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    width:25vw;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content{
+    display: flex;
+    margin-right: 25vw;
+    background-color: transparent;
+    color: black;
+
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content div{
+    flex: 1 1 0px;
+}
+
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content div p{
+    border-top: 2px solid black;
+    background-color: white;
+
+}
+
+
+
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-title{
+    position: sticky;
+    top: 87px;
+    z-index: 1;
+    padding-left: 7px;
+    direction: ltr;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    width:25vw;
+
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content{
+    display: flex;
+    margin-right: 25vw;
+    background-color: transparent;
+    color: black;    
+
+}
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div{
+    flex: 1 1 0px;
+}
+
+.site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div p{
+    border-top: 2px solid black;
+    background-color: white;
+
+}
+
+
+
+
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-title{
+    background-color: black;
+    color: white;
+    width: 25vw;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-title{
+    position: sticky;
+    top: 87px;
+    z-index: 1;
+    padding-left: 7px;
+    direction: ltr;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    width:25vw;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content{
+    display: flex;
+    margin-right: 25vw;
+    background-color: transparent;
+    color: black;
+
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content div{
+    flex: 1 1 0px;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content div p{
+    border-top: 2px solid black;
+    background-color: white;
+}
+
+
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-title{
+    position: sticky;
+    top: 87px;
+    z-index: 1;
+    padding-left: 7px;
+    direction: ltr;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    width:25vw;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content{
+    display: flex;
+    margin-right: 25vw;
+    background-color: transparent;
+    color: black;
+
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content div{
+    flex: 1 1 0px;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content div p{
+    border-top: 2px solid black;
+    background-color: white;
+
+}
+
+
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-title{
+    position: sticky;
+    top: 87px;
+    z-index: 1;
+    padding-left: 7px;
+    direction: ltr;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    width:25vw;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content{
+    display: flex;
+    margin-right: 25vw;
+    background-color: transparent;
+    color: black;
+
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content div{
+    flex: 1 1 0px;
+}
+.site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content div p{
+    border-top: 2px solid black;
+    background-color: white;
+
+}
+
+
+/* ----------------------------- FIRST DEGREE END ------------------------------- */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* ----------------------------------- FOOTER ----------------------------------- */
+
+.site-footer{
+    /* margin-top: 500px; */
+    background-color: rgb(255, 255, 132);
+    z-index: 5;
+}
+
+
+
+
+
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* ........................................................................................................................... */
+/* ........................................................................................................................... */
+/* ........................................................................................................................... */
+/* ................................................                    ....................................................... */
+/* ................................................       MOBILE       ....................................................... */
+/* ................................................                    ....................................................... */
+/* ........................................................................................................................... */
+/* ........................................................................................................................... */
+/* ........................................................................................................................... */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+
+
+
+
+/* font import */
+
+@font-face {
+    font-family: "narkiss-tam";
+    src: url("fonts/NarkissTam-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "narkiss-tam";
+    src: url("fonts/NarkissTam-Light.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "narkiss-tam";
+    src: url("fonts/NarkissTam-Medium.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "narkiss-tam";
+    src: url("fonts/NarkissTam-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "narkiss-tam";
+    src: url("fonts/NarkissTam-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "narkiss-tam";
+    src: url("fonts/NarkissTam-Heavy.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: "narkiss-tam";
+    src: url("fonts/NarkissTam-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "vc-david";
+    src: url("fonts/VC_david-Medium.woff2") format("woff2");
+}
+/* @font-face {
+    font-family: "vc-david";
+    font-style: italic;
+    src: url("fonts/VC_david-Cursive.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "simpler";
+    src: url("fonts/SimplerPro-Black.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "vc-aharoni";
+    src: url("fonts/VC\ Aharoni/VC_Aharoni-Regular.woff2") format("woff2");
+} */ 
