@@ -145,6 +145,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     transition: top 0.3s ease;
 }
 
+.site-content-page-header-body{
+    
+}
+
 .drop-down{
     top: calc(0vh + 28px);
     /* width: 100%; */
