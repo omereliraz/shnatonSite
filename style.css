@@ -173,6 +173,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color: white;
 }
 
+#dropdown-card-text{
+    font-size: 22px;
+}
+
 .site-content-page-header-body{
     position: static;
 }
@@ -387,7 +391,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-opening{
     position: fixed;
     top: 29px;
-    z-index: -2;
+    z-index: -6;
     overscroll-behavior: none;
 }
 
@@ -396,7 +400,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     display: flex;
     height: calc(100vh - 28px);
     padding-right: 2.3vw;
-    padding-bottom: 2.3vw;
+    padding-bottom: 30px;
     
     font-size: 15vw;
     letter-spacing: -0.1em;
@@ -406,6 +410,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: black;
     color: rgb(255, 255, 255);
 }
+
 
 .site-content-page-opening-title p{
     align-self: flex-end;
@@ -417,13 +422,13 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color: white;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    padding-left: 15vw;
+    padding-left: 25%;
 }
 
 @media only screen and (max-width: 700px) {
     .site-content-page-opening-disclaimer {
         height: 30px;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
 }
 
@@ -435,6 +440,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-opening-contents-title{
     position: sticky;
     top: 28px;
+    
 
     background-color: white;
 
@@ -480,7 +486,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     margin-top: 100vh;
     position: sticky;
     top: 29px;
-    z-index: -1;
+    z-index: -4;
 }
 
 .site-content-page-opening-body-divider0-title{
@@ -502,7 +508,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-opening-body-divider1{
     position: sticky;
     top: 29px;
-    z-index: -1;
+    z-index: -4;
 }
 
 .site-content-page-opening-body-divider1-title{
@@ -523,7 +529,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-opening-body-divider2{
     position: sticky;
     top: 29px;
-    z-index: -1;
+    z-index: -4;
 }
 
 .site-content-page-opening-body-divider2-title{
@@ -549,22 +555,54 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     direction: ltr;    
 }
 .site-content-page-opening-body-positions-title p{
-
     width: 25vw;
     background-color: white;
     color: black;
     font-weight: 500;
     padding-left: 7px;
-
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-positions-title p{
+        width: 50%;
+    }
+}
+
 
 .site-content-page-opening-body-positions-body{
     display: flex;
+    z-index: -50;
 }
 
 .positions-section1{
     flex:1;
 }
+.positions-section2{
+    flex:1;
+}
+.positions-section3{
+    flex:1;
+}
+.positions-section4{
+    flex:1;
+}
+
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-positions-body{
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-positions-body > div{
+        /* flex-basis: 50%; */
+        flex: auto;
+        width:50%;
+    }
+
+    .site-content-page-opening-body-positions-body > div > div{
+        margin-bottom: 50vw;
+    }
+}
+
 
 .site-content-page-opening-body-positions-body-administration{
     margin-bottom: 12.5vw;
@@ -777,17 +815,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 
 
-.positions-section2{
-    flex:1;
-}
 
-.positions-section3{
-    flex:1;
-}
-
-.positions-section4{
-    flex:1;
-}
 
 .site-content-page-opening-body-positions-body div{
     /* background-color: rgb(31, 31, 31); */
@@ -801,82 +829,85 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-opening-body-academicplans-body-intro{
     position: relative;
     border: solid 2px black;
-    width: 25vw;
+    width: 25%;
+    z-index: -1;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-academicplans-body-intro{
+        width: 100%;
+    }
 }
 
 .site-content-page-opening-body-academicplans{
     color: black;
-    /* font-weight: 600; */
-    /* background-color: rgb(195, 155, 255); */
 }
 
 .site-content-page-opening-body-academicplans-title{
     position: sticky;
     top: 28px;
     direction: ltr;
-    /* height: 25vw; */
-    
 }
 .site-content-page-opening-body-academicplans-title p{
-    /* direction: rtl; */
-    /* height: 12.5vw; */
-    width: 25vw;
+    width: 25%;
     background-color: white;
     color: black;
     font-weight: 500;
     padding-left: 7px;
-    /* border-top: 2px solid black; */
-    /* background-color: white; */
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-academicplans-title p{
+        width: 50%;
+    }
 }
 
-.site-content-page-opening-body-academicplans-body{
-    /* display: flex; */
-    margin-left: 25vw;
-
-}
-
-.site-content-page-opening-body-academicplans-body div{
-}
-
-.site-content-page-opening-body-academicplans-body > * > *{
+.site-content-page-opening-body-academicplans-body > div > div{
     position: sticky;
     top: 56px;
-    z-index:21;
+    z-index:-1;
 
 }
 
+.site-content-page-opening-body-academicplans-body > div > div + div{
+    z-index:-2;
+}
 
-.site-content-page-opening-body-academicplans-body > * > * p{
-    background-color: black;    
+.site-content-page-opening-body-academicplans-body > * > *:first-child p{
+    width: 25%;
     z-index:21;
+    background-color: black;    
     color: white;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-academicplans-body > * > *:first-child p {
+        width: 100%;
+    }
+}
+
+.site-content-page-opening-body-academicplans-body > div > div + div {
+    margin-right: 25%;
+    margin-left: 25%;
+    min-height: 12.5vw;
+
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-academicplans-body > div > div + div {
+        margin-right: 0%;
+        margin-left: 0%;
+    }
 }
 
 .site-content-page-opening-body-academicplans-body > * > * + * p:nth-child(odd){
     background-color:rgb(93, 185, 88);
     color: white;
-    padding-left: 15vw;
-    margin-right: 25vw;
     z-index: 1;
+    max-width: 65ch;
 }
-
 .site-content-page-opening-body-academicplans-body > * > * + * p:nth-child(even){
     background-color:white;
     color: rgb(93, 185, 88);
-    padding-left: 15vw;
-    margin-right: 25vw;
-
+    max-width: 65ch;
 }
 
-.site-content-page-opening-body-academicplans-body-intro{
-    border: solid 2px black;
-    width: 25vw;
-}
-
-.site-content-page-opening-body-academicplans-body-intro p{
-    /* position: relative; */
-    
-}
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
@@ -884,91 +915,97 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 .site-content-page-opening-body-administration{
     color: black;
-    /* font-weight: 600; */
-    /* background-color: rgb(195, 155, 255); */
 }
 
 .site-content-page-opening-body-administration-title{
     position: sticky;
     top: 28px;
     direction: ltr;
-    /* height: 25vw; */
-    
 }
+
 .site-content-page-opening-body-administration-title p{
-    /* direction: rtl; */
-    /* height: 12.5vw; */
-    width: 25vw;
+    width: 25%;
     background-color: white;
     color: black;
     font-weight: 500;
     padding-left: 7px;
-    /* border-top: 2px solid black; */
-    /* background-color: white; */
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-administration-title p {
+        width: 50%;
+    }
 }
 
-.site-content-page-opening-body-administration-body{
-    /* display: flex; */
-    margin-left: 25vw;
-
-}
-
-.site-content-page-opening-body-administration-body div{
-}
-
-
-.site-content-page-opening-body-administration-body > * > *{
+.site-content-page-opening-body-administration-body > div > div{
     position: sticky;
     top: 56px;
-    z-index:21;
-    
-
+    z-index:-1;
 }
 
-.site-content-page-opening-body-administration-body > * > * + *{
-    z-index:21;
-    min-height: 12.5vw;;
-
+.site-content-page-opening-body-administration-body > div > div + div{
+    z-index:-2;
+    min-height: 12.5vw;
+    width: 100%;
 }
 
 
-.site-content-page-opening-body-administration-body > * > * p{
+.site-content-page-opening-body-administration-body > div > div:first-child p{
+    z-index:-1;
     background-color: black;    
-    z-index:21;
     color: white;
+    width: 25%;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-administration-body > div > div:first-child p{
+        width: 100%;
+    }
 }
 
-.site-content-page-opening-body-administration-body > * > * + * p:nth-child(odd){
+.site-content-page-opening-body-administration-body > div > div + div p:nth-child(odd){
+    margin-right: 25%;
+    margin-left: 25%;
+    max-width: 65ch;
+    
+    z-index: -1;
     background-color:rgb(255, 121, 72);
     color: white;
-    padding-left: 15vw;
-    margin-right: 25vw;
-    z-index: 1;
 }
 
-.site-content-page-opening-body-administration-body > * > * + * p:nth-child(even){
+.site-content-page-opening-body-administration-body > div > div + div p:nth-child(even){
+    max-width: 65ch;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+    z-index: -1;
     background-color:white;
     color: rgb(255, 121, 72);
-    /* color: rgb(93, 185, 88); */
-    padding-left: 15vw;
-    margin-right: 25vw;
 
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-administration-body > div > div + div p:nth-child(odd){
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-administration-body > div > div + div p:nth-child(even){
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }
 
 .site-content-page-opening-body-administration-body-intro{
-    width: 25vw;
+    width: 25%;
     border: 2px solid black;
 }
-
-
-/* .site-content-page-opening-body-academicplans-body-pastheads-items p:nth-child(odd){
-    background-color:rgb(195, 155, 255);
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-body-administration-body-intro{
+        width: 100%;
+    }
 }
 
-.site-content-page-opening-body-academicplans-body-pastheads-items p:nth-child(even){
-    background-color:white;
-    color:rgb(195, 155, 255);
-} */
 
 /* -------------------------------- OPENING END ---------------------------------- */
 /* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
@@ -1014,26 +1051,31 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 }
 
 .site-content-page-calendar-year{
+    display: flex;
+    flex-direction: column-reverse;
     margin-top: -100vh;
+    width: 15%;
     position:sticky;
     top: 28px;
     display: flex;
     color: blue;
+    z-index: 6;
+}
+.site-content-page-calendar-year p{
+    background-color: white;
+    border-bottom: solid calc(15vw - 27px) blue;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-year{
+        margin-top: calc(-100vh + 16vw);
+        width:25%;
 
-    z-index: 5;
+    }
 }
 
-.site-content-page-calendar-year-title{
-}
-
-.site-content-page-calendar-year-text{
-}
-
-.site-content-page-calendar-semesters{
-}
 
 .div-a{
-    border-top: 2px solid red;
+    border-top: 2px solid rgb(255, 89, 0);
 }
 
 .site-content-page-calendar-semesters-a{
@@ -1044,7 +1086,29 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 .site-content-page-calendar-semesters-a-title{
     display: flex;
-    color: red;
+    color: rgb(255, 89, 0);
+}
+
+.site-content-page-calendar-semesters-a-title-block{
+    width: 15%;
+    background-color: rgb(114, 255, 114);
+}
+.site-content-page-calendar-semesters-a-title p{
+    display: flex;
+    color: rgb(255, 89, 0);
+    background-color: white;
+    width: 15%;
+    border-bottom: solid calc(15vw - 27px) rgb(255, 89, 0);
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-semesters-a-title-block{
+        width: 25%;
+        background-color: rgb(114, 255, 114);
+    }
+    .site-content-page-calendar-semesters-a-title p{
+        width:25%;
+
+    }
 }
 
 .site-content-page-calendar-semesters-eventsa{
@@ -1052,30 +1116,70 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color: black;
     /* padding-bottom: 15vw; */
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-semesters-eventsa{
+        flex-direction: column;
+    }
+}
+
 
 .site-content-page-calendar-semesters-eventsa-title{
     position: sticky;
     top: 28px;
     display: flex;
-    height: 0px;
+    height: 15vw;
+    width:45%;
 }
+
+.site-content-page-calendar-semesters-eventsa-title > div{
+    flex: 1 1 0px;
+}
+.site-content-page-calendar-semesters-eventsa-title-red-block{
+    background-color: rgb(255, 89, 0);
+}
+.site-content-page-calendar-semesters-eventsa-title-white-block{
+    background-color: white;
+}
+.site-content-page-calendar-semesters-eventsa-title-black-block{
+    background-color: black;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-semesters-eventsa-title{
+        width:100%;
+    }
+    .site-content-page-calendar-semesters-eventsa-title > div{
+        flex: auto;
+    }
+    .site-content-page-calendar-semesters-eventsa-title-red-block{
+        width:25%;
+    }
+    .site-content-page-calendar-semesters-eventsa-title-white-block{
+        width:25%;
+
+    }
+    .site-content-page-calendar-semesters-eventsa-title-black-block{
+        width:50%;
+    }
+}
+
 
 .site-content-page-calendar-semesters-eventsa-events{
     border-top: 2px solid black;
     flex-grow: 1;
-    z-index: 5;
+    z-index: 3;
+    width: 55%;
     /* background-color: aliceblue; */
 }
-
-
-.site-content-page-calendar-eventsa{
-    position: relative;
-    display: flex;
-    color: black;
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-semesters-eventsa-events{
+        width: 100%
+    }
 }
 
+
+
 .div-b{
-    border-top: 2px solid rgb(114, 255, 114);
+    /* border-top: 2px solid rgb(114, 255, 114); */
 }
 
 .site-content-page-calendar-semesters-b{
@@ -1088,6 +1192,54 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     display: flex;
     color: rgb(114, 255, 114);
 }
+.site-content-page-calendar-semesters-b-title-red-block{
+    width: 15%;
+    background-color: rgb(255, 89, 0);
+}
+/* .site-content-page-calendar-semesters-b-title > div{
+    flex: 1 1 0px;
+} */
+
+
+.site-content-page-calendar-semesters-b-title p{
+    display: flex;
+    width: 15%;
+    
+    /* font-weight: 700; */
+    background-color: white;
+    color: rgb(114, 255, 114);
+    border-bottom: solid calc(15vw - 27px) rgb(114, 255, 114);
+}
+@media only screen and (max-width: 700px) {
+    /* .site-content-page-calendar-semesters-b-title{
+        width: 50%;
+    }
+    .site-content-page-calendar-semesters-b-title *{
+        flex: 1 1 0px;
+    } */
+    .site-content-page-calendar-semesters-b-title-red-block{
+        width: 25%;
+        background-color: rgb(255, 89, 0);
+    }
+    .site-content-page-calendar-semesters-b-title p{
+        width:25%;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-semesters-eventsb{
+        flex-direction: column;
+    }
+}
+/* .site-content-page-calendar-semesters-b-title-red-block{
+    width: 15%;
+    background-color: red;
+} */
+
+
 
 .site-content-page-calendar-semesters-eventsb{
     display: flex;
@@ -1099,17 +1251,58 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     position: sticky;
     top: 28px;
     display: flex;
-    height: 0px;
+    height: 15vw;
     color: magenta;
+    width:45%;
+    /* z-index: 6; */
+}
+
+.site-content-page-calendar-semesters-eventsb-title > div{
+    height: 15vw;
+    flex: 1 1 0px;
+}
+.site-content-page-calendar-semesters-eventsb-title-red-block{
+    background-color: rgb(114, 255, 114);
+}
+.site-content-page-calendar-semesters-eventsb-title-black-block{
+    background-color: black;
+    z-index: 6;
+}
+.site-content-page-calendar-semesters-eventsb-title-white-block{
+    background-color: white;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-semesters-eventsb-title{
+        width:100%;
+    }
+    .site-content-page-calendar-semesters-eventsb-title > div{
+        flex: auto;
+    }
+    .site-content-page-calendar-semesters-eventsb-title-red-block{
+        width:25%;
+    }
+    .site-content-page-calendar-semesters-eventsb-title-white-block{
+        width:25%;
+    }
+    .site-content-page-calendar-semesters-eventsb-title-black-block{
+        width:50%;
+    }
 }
 
 .site-content-page-calendar-semesters-eventsb-events{
+    width: 55%;
     border-top: 2px solid black;
     color: black;
     flex-grow: 1;
-    z-index: 5;
-
+    z-index: 0;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-calendar-semesters-eventsb-events{
+        width: 100%;
+    }
+}
+
+
 
 .event{
     display: flex;
@@ -1134,7 +1327,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     padding-left: 5px;
     padding-top: 2px;
     padding-bottom: 3px;
-    flex:3;
+    /* flex: 1 1 0px; */
     font-weight: 500;
 }
 
@@ -1143,17 +1336,28 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     /* background-color: yellow; */
     text-align: left;
     flex-grow: 1;
-    flex:2;
+    /* flex:1 1 0px; */
+    /* max-width: 8ch; */
     font-weight: 700;
+}
+@media only screen and (max-width: 1120px) {
+    .event p + p{
+        max-width: 8ch;
+
+    }
 }
 
 
 .blank-block{
+    position: relative;
+
     width: 15vw;
     height: 15vw;
 }
 
 .white-block{
+    position: relative;
+
     width: 15vw;
     height: 15vw;
     background-color: white;
@@ -1187,7 +1391,9 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 }
 
 .black-block{
-    top: 45px;
+    position: relative;
+
+    /* top: 45px; */
     width: 15vw;
     height: 15vw;
     background-color: black;
@@ -1210,202 +1416,276 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 /* background text */
 .site-content-page-tuition-title{
     position: sticky;
-    top: 45px;
+    top: 30px;
     padding-right: 2.3vw;
-    padding-bottom: 2vw;
+    padding-bottom: 5vw;
     
     font-size: 15vw;
     letter-spacing: -0.1em;
     font-weight: 800;
-    line-height: 90%;
+    line-height: 100%;
     z-index: 0;
 
     color: rgb(114, 255, 114);
 }
+@media only screen and (min-width: 1500px) {
+    .site-content-page-tuition-title{
 
-.border-container{
-    display: flex;
-    justify-content: flex-end;
+        padding-bottom: 2vw;
+    }
 }
 
-.link-border{
-    /* float: left; */
-    height:1.5px;
-    width: 41vw;
-    /* align:left; */
-    /* direction: rtl; */
-    /* background-color: rgb(0, 64, 255); */
-    z-index: -1;
+
+
+.site-content-page-tuition-body{
+
 }
 
 .site-content-page-tuition-links{
     position: sticky;
-    top: 45px;
+    top: 26px;
     
     direction: ltr;
     justify-content: end;
     align-items: stretch;
-    align-content: stretch;
-    
+    align-content: stretch;  
+    background-color: white;  
 }
 
-.site-content-page-tuition-links-title {
-    /* background-color: white; */
-    width: 30vw;
-    background-color: rgb(114, 255, 114);
 
+.site-content-page-tuition-links-title {
+    width: 25%;
+    padding-left: 7px;
+    
+    
+    background-color: rgb(114, 255, 114);
     color: rgb(0, 64, 255);
     color: white;
-    padding-left: 7px;
-    padding-right: 7px;
 }
-
-.site-content-page-tuition-links-title {
-    /* background-color: white; */
+.site-content-page-tuition-links-title p{
+    direction: rtl;
 }
-
-.site-content-page-tuition-links-phone-blank-block{
-    width: 15vw;
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-links-title {
+        width: 50%;
+        background-color: rgb(114, 255, 114);
+    }
 }
-
 
 .site-content-page-tuition-links-phone{
-    font-weight: 500;
     color: white;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    /* z-index: 5; */
-    /* white-space: nowrap; */
-    
+    width: 100%;
 }
-
 .site-content-page-tuition-links-phone-title{
-    border-top: 2px solid rgb(255, 89, 0);
+    width:12.5%;
     padding-left: 7px;
-    font-weight: 500;
+
+    border-top: 2px solid rgb(255, 89, 0);
     color: rgb(255, 89, 0);
-    background-color: white;
 }
-
-
 .site-content-page-tuition-links-phone-text{
-    /* width: 15vw; */
+    width:25%;
+
     display: flex;
     flex-direction: column-reverse;
     direction: rtl;
 
-    font-weight: 500;
     color: white;
     background-color: rgb(255, 89, 0);
 }
-
 .site-content-page-tuition-links-phone-text p{
-    width: 15vw;
-    padding-right: 7px;
-    padding-bottom: 3px;
     color: white;
-    
-
     background-color: rgb(255, 89, 0);
-    /* z-index: 6; */
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-links-phone{
+        /* width: 50%; */
+    }
+    .site-content-page-tuition-links-phone-title{
+        width: 25%;
+    }
+    .site-content-page-tuition-links-phone-text{
+        width: 50%;
+    }
 
-.site-content-page-tuition-links-1{
-    /* z-index: 6; */
-}
-
-.site-content-page-tuition-links-2{
-    /* z-index: 6; */
-}
-
-.site-content-page-tuition-links-3{
-    /* z-index: 6; */
 }
 
 
 .site-content-page-tuition-links-email{
     display: flex;
     justify-content: flex-end;
-    /* flex-direction: row-reverse; */
     direction: rtl;
 
     font-weight: 500;
     color:  white;
-    /* z-index: 5; */
 }
 
 .site-content-page-tuition-links-email p{
-    padding-right: 7px;
     padding-left: 7px;
-    /* width: 30vw; */
+    width: 12.5%;
+    direction: ltr;
     color:rgb(0, 64, 255);
     border-top: 2px solid rgb(0, 64, 255);
 }
 
 .site-content-page-tuition-links-email p+p{
-    padding-right: 7px;
-    width: 30vw;
+    width: 25%;
     color:  white;
     background-color:rgb(0, 64, 255);
 }
 
 .site-content-page-tuition-links-aid{
     direction: rtl;
-    width: 30vw;
-    padding-right: 7px;
+    width: 25%;
     padding-bottom: 2px;
     color: white;
     background-color: rgb(255, 89, 0);
     transition: background-color 0.2s, color 0.2s, padding-right 0.5s;
     z-index: 1;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-links-email p{
+        width: 25%;
+    }
+    
+    .site-content-page-tuition-links-email p+p{
+        width: 50%;
+    }
+    
+    .site-content-page-tuition-links-aid{
+        width: 50%;
+    }
+
+}
 
 .site-content-page-tuition-links-aid:hover{
-    padding-right: 15px;
     color: rgb(255, 89, 0);
     background-color: white;
 }
 
+
+.site-content-page-tuition-links-4{
+    display: flex;
+    /* height: 31px; */
+    width: 100%;
+}
+
+.site-content-page-tuition-links-4-block1{
+    width: 15%;
+    height: 15vw;
+    background-color: rgb(0, 64, 255);
+}
+
+.site-content-page-tuition-links-4-block2{
+    /* height: 31px; */
+    width: 15%;
+    /* height: 15vw; */
+    background-color: white;
+    
+}
+
+.site-content-page-tuition-links-5{
+    display: flex;
+    width: 100%;
+}
+
+.site-content-page-tuition-links-5-block1{
+    width: 15%;
+    background-color: white;
+}
+
+.site-content-page-tuition-links-5-block2{
+    width: 15%;
+    height:60vh;
+    overflow-y: hidden;
+    background-color: rgb(255, 89, 0);
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-links-4-block1{
+        width: 50%;
+        height: 28px;
+    }
+    .site-content-page-tuition-links-5-block1{
+        width: 50%;
+        background-color: white;
+    }
+    .site-content-page-tuition-links-5-block2{
+        width: 50%;
+        height: 28px;
+    }
+}
+
 .site-content-page-tuition-text{
-    margin-top: -40vh;
     position: relative;
+    margin-top: calc(-60vh - 15vw);
+    min-height: 60vh;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-text{
+        margin-top: calc(-0vw );
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .site-content-page-tuition-links-5-block2{
+        height:15vh;
+        
+    }
+    .site-content-page-tuition-text{
+        margin-top: calc(-15vh - 15vw);
+        min-height: 15vh;
+    }
+
 }
 
 .site-content-page-tuition-text-title{
     position: sticky;
-    top: 45px;
-    width:15vw;
-    padding-top: 5px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    font-weight: 700;
+    top: 28px;
+
+    width:25%;
+    padding-top: 2px;
     line-height: 160%;
+    border-top: 2px solid white;
+
     color: white;
     background-color: black;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-text-title{
+        width:100%;
+        /* top:30vh; */
+        
+    }
+}
 
 .site-content-page-tuition-text-body{
-    padding-right: 15.5vw;
-    padding-left: 0.5vw;
-    /* padding-top: 30px; */
-    width: 55vw;
+    width: 50%;
+    margin-right: 25%;
 
     font-weight: 500;
     border-top: 2px solid black;
     color: black;
     background-color: white;
 
-    /* background-color: red; */
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-text-body{
+        width: 100%;
+        margin-right: 0%;
+    
+    }
 }
 
 
 .site-content-page-tuition-text-body p{
     padding-bottom: 15px;
+    max-width: 65ch;
 }
 
 .site-content-page-tuition-more{position: sticky;
-    bottom: 0;
+    /* bottom: 0; */
     justify-content: end;
     /* padding-right: 55vw; */
     display: flex;
@@ -1413,11 +1693,17 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 }
 
 .site-content-page-tuition-more-degree{
-    width: 15vw;
+    width: 15%;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-more-degree{
+        width: 50%;
+    }
 }
 
+
 .site-content-page-tuition-more-degree-title{
-    width: 15vw;
+    /* width: 15vw; */
     /* height: 15vw; */
     border-top: 2px solid rgb(255, 89, 0);
     color: rgb(255, 89, 0);
@@ -1425,12 +1711,18 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 }
 
 .site-content-page-tuition-more-degree-text p{
-    width: 15vw;
-    padding-right: 7px;
+    /* width: 15vw; */
     /* height: 15vw; */
     color: white;
     background-color: rgb(255, 89, 0);
     transition: background-color 0.2s, color 0.2s, padding-right 0.5s;
+
+}
+@media only screen and (min-width: 1500px) {
+    .site-content-page-tuition-more-degree-title{
+
+    
+    }
 
 }
 
@@ -1441,21 +1733,21 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 }
 
 .site-content-page-tuition-more-forms{
-    width: 15vw;
+    width: 15%;
 }
-
+@media only screen and (max-width: 700px) {
+    .site-content-page-tuition-more-forms{
+        width: 50%;
+    }
+}
 .site-content-page-tuition-more-forms-title{
-    width: 15vw;
-    /* height: 15vw; */
+
     border-top: 2px solid rgb(0, 64, 255);
     color: rgb(0, 64, 255);
     background-color: white;
 }
 
 .site-content-page-tuition-more-forms-text{
-    width: 15vw;
-    padding-right: 7px;
-    /* height: 15vw; */
     color: white;
     background-color: rgb(0, 64, 255);
     transition: background-color 0.2s, color 0.2s, padding-right 0.5s;
@@ -1463,52 +1755,8 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 }
 
 .site-content-page-tuition-more-forms-text:hover{
-    padding-right: 15px;
     background-color: white;
     color: rgb(0, 64, 255);
-}
-
-.site-content-page-tuition-links-4{
-    display: flex;
-    /* height: 31px; */
-    width: 30vw;
-}
-
-.site-content-page-tuition-links-4-block1{
-    width: 15vw;
-    height: 31px;
-    height: 7.5vw;
-    background-color: rgb(0, 64, 255);
-}
-
-.site-content-page-tuition-links-4-block2{
-    height: 31px;
-    width: 15vw;
-    height: 7.5vw;
-    background-color: white;
-    
-}
-
-.site-content-page-tuition-links-5{
-    display: flex;
-    /* height: 31px; */
-    width: 30vw;
-    
-    /* z-index: 66; */
-}
-
-.site-content-page-tuition-links-5-block1{
-    width: 15vw;
-    height: 31px;
-    background-color: white;
-    
-}
-
-.site-content-page-tuition-links-5-block2{
-    /* height: 31px; */
-    width: 15vw;
-    height: 15vw;
-    background-color: rgb(255, 89, 0);
 }
 
 /* -------------------------------- TUITION END --------------------------------- */
@@ -1675,11 +1923,9 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color:  rgb(255, 89, 0);
     background-color: white;
 }
-
 .site-content-page-bachelor-faculty-content div{
     flex:1 1 0px;
 }
-
 @media only screen and (max-width: 700px) {
     .site-content-page-bachelor-faculty-content{
         flex-wrap: wrap;
@@ -1806,16 +2052,16 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     .site-content-page-bachelor-about-content{
         margin-left: 0%;
         margin-right: 0%;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
+        /* padding-right: 20px; */
+        /* padding-left: 20px; */
+        /* padding-top: 20px; */
     }
 }
 
 .site-content-page-bachelor-about-content p{
-    padding-right:12px;
-    padding-left:12px;
-    padding-top:7px;
+    padding-right:20px;
+    padding-left:20px;
+    padding-top:2px;
     max-width: 65ch;
 }
 .site-content-page-bachelor-about-content p + p{
@@ -1840,6 +2086,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 .site-content-page-bachelor-academicplan div div + div{
     width: auto;
+    padding-bottom: 15px;
     margin-right: 25%;
     margin-left: 25%;
     /* width:50vw; */
@@ -1849,27 +2096,34 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color:white
 }
 
-.site-content-page-bachelor-academicplan div div + div p:nth-child(even){
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-right: 12px;
-    padding-left: 12px;
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-academicplan div div + div{
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+}
+
+.site-content-page-bachelor-academicplan div div + div p{
+    padding-right:20px;
+    padding-left:20px;
+    /* padding-top:12px; */
+    max-width: 65ch;
+
+}
+
+
+.site-content-page-bachelor-academicplan div div + div p + p{
+    padding-right:20px;
+    padding-left:20px;
+    /* padding-top:12px; */
     max-width: 65ch;
     /* color: blue; */
     /* color:  rgb(255, 89, 0);
     background-color:white */
 }
 
-.site-content-page-bachelor-academicplan div div + div p:nth-child(odd){
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-right: 12px;
-    padding-left: 12px;
-    max-width: 65ch;
-    /* color: blue; */
-    background-color:  rgb(255, 89, 0);
-    color:white
-}
+
 
 #academicplan-subtitle{
     color:  rgb(255, 89, 0);
