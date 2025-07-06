@@ -2083,12 +2083,19 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: black;
     color: white;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-academicplan div div{
+        width: 100%;
+
+    }
+}
 
 .site-content-page-bachelor-academicplan div div + div{
     width: auto;
     padding-bottom: 15px;
     margin-right: 25%;
     margin-left: 25%;
+    z-index: -2;
     /* width:50vw; */
     /* max-width: 70ch; */
     /* height: auto; */
@@ -2139,7 +2146,8 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 /* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXXOXOXOXOXOOX SCHEDULE XOXOXOXOXOXOXOXOXXOXOOXOXOXOXOXOXOXOX */
 .site-content-page-bachelor-schedule{
     width: 100%;
-    overflow-x: auto;
+    /* contain: paint; */
+    /* overflow-x: auto; */
 }
 .site-content-page-bachelor-schedule-title{
     position: sticky;
@@ -2167,10 +2175,16 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 }
 
 .site-content-page-bachelor-schedule-title-content{
-    margin-right: 25vw;
+    margin-right: 25%;
     display: flex;
     background-color: black;
     color: white; 
+}
+
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-title-content{
+        margin-right: 0%;
+    }
 }
 
 
@@ -2182,25 +2196,67 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 
 
-.site-content-page-bachelor-schedule-content-yeara-semestera-classa-title{
-    background-color: black;
-    color: white;
-    width: 25vw;
+.site-content-page-bachelor-schedule-content-yeara-semestera-classa-title {
+    border-bottom: 2px solid black;
+    width: 100%;
     position: sticky;
     top: 59px;
+}
+.site-content-page-bachelor-schedule-content-yeara-semestera-classa-title p{
+    background-color: black;
+    color: white;
+
+    width: 25%;
     z-index: 1;
     /* height: 12.5vw; */
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yeara-semestera-classa-title{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+
+    }
+    .site-content-page-bachelor-schedule-content-yeara-semestera-classa-title p{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+        border-top: 2px solid black;
+        color: black;
+        background-color:white 
+    }
+}
+
 .site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div{
     display: flex;
     background-color: transparent;
-    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div{
+        width:100%;
+        flex-wrap: wrap;
+    }
+}
+
+
 .site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div p:first-child{
     direction: ltr;
     padding-left: 7px;
     width: 25vw;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div p:first-child{
+        width:100%;
+        direction: rtl;
+        background-color: red;
+
+    }
+}
+
 .site-content-page-bachelor-schedule-content-yeara-semestera-classa-content div p + p{
     flex: 1 1 0px;
     background-color: white;
@@ -2215,85 +2271,233 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 
 
-.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-title{
+.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-title {
+    border-bottom: 2px solid black;
+    width: 100%;
+    width: 25%;
+    position: sticky;
+}
+.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-title p{
     background-color: black;
     color: white;
-    width: 25vw;
-    position: sticky;
+
     top: 59px;
     z-index: 1;
     /* height: 12.5vw; */
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yeara-semesterb-classa-title{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+
+    }
+    .site-content-page-bachelor-schedule-content-yeara-semesterb-classa-title p{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+        border-top: 2px solid black;
+        color: black;
+        background-color:white 
+    }
+}
 .site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div{
     display: flex;
     background-color: transparent;
-    border-top: 2px solid black;
-
+    border-bottom: 2px solid black;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div{
+        width:100%;
+        flex-wrap: wrap;
+    }
+}
+
+
 .site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div p:first-child{
     direction: ltr;
     padding-left: 7px;
     width: 25vw;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div p:first-child{
+        width:100%;
+        direction: rtl;
+        background-color: red;
+
+    }
+}
+
 .site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div p + p{
     flex: 1 1 0px;
     background-color: white;
+    /* background-color: rgb(255, 89, 0); */
     color: black;
+    transition: background-color 0.1s;
+}
+
+.site-content-page-bachelor-schedule-content-yeara-semesterb-classa-content div p + p:hover{
+    background-color: white;
 }
 
 
-.site-content-page-bachelor-schedule-content-yearb-semestera-classa-title{
-    background-color: black;
-    color: white;
+.site-content-page-bachelor-schedule-content-yearb-semestera-classa-title {
     position: sticky;
     top: 59px;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+.site-content-page-bachelor-schedule-content-yearb-semestera-classa-title p{
+    background-color: black;
+    color: white;
+
+    width: 25%;
     z-index: 1;
-    width: 25vw;
     /* height: 12.5vw; */
+}
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearb-semestera-classa-title{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+
+    }
+    .site-content-page-bachelor-schedule-content-yearb-semestera-classa-title p{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+        border-top: 2px solid black;
+        color: black;
+        background-color:white 
+    }
 }
 .site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div{
     display: flex;
     background-color: transparent;
-    border-top: 2px solid black;
-
+    border-bottom: 2px solid black;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div{
+        width:100%;
+        flex-wrap: wrap;
+    }
+}
+
+
 .site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div p:first-child{
     direction: ltr;
     padding-left: 7px;
     width: 25vw;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div p:first-child{
+        width:100%;
+        direction: rtl;
+        background-color: red;
+
+    }
+}
+
 .site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div p + p{
     flex: 1 1 0px;
     background-color: white;
+    /* background-color: rgb(255, 89, 0); */
     color: black;
+    transition: background-color 0.1s;
+}
+
+.site-content-page-bachelor-schedule-content-yearb-semestera-classa-content div p + p:hover{
+    background-color: white;
 }
 
 
-.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-title{
-    background-color: black;
-    color: white;
-    width: 25vw;
+
+.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-title {
     position: sticky;
     top: 59px;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-title p{
+    background-color: black;
+    color: white;
+    
+    width: 25%;
     z-index: 1;
     /* height: 12.5vw; */
+}
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearb-semesterb-classa-title{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+
+    }
+    .site-content-page-bachelor-schedule-content-yearb-semesterb-classa-title p{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        z-index: 1;
+        border-top: 2px solid black;
+        color: black;
+        background-color:white 
+    }
 }
 .site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div{
     display: flex;
     background-color: transparent;
-    border-top: 2px solid black;
-
+    border-bottom: 2px solid black;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div{
+        width:100%;
+        flex-wrap: wrap;
+    }
+}
+
+
 .site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div p:first-child{
     direction: ltr;
     padding-left: 7px;
     width: 25vw;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div p:first-child{
+        width:100%;
+        direction: rtl;
+        background-color: red;
+
+    }
+}
+
 .site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div p + p{
     flex: 1 1 0px;
     background-color: white;
+    /* background-color: rgb(255, 89, 0); */
     color: black;
+    transition: background-color 0.1s;
 }
+
+.site-content-page-bachelor-schedule-content-yearb-semesterb-classa-content div p + p:hover{
+    background-color: white;
+}
+
+
+
+
+/* MMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* MMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* MMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* MMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* MMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
 
 
 #empty-schedule-block{
@@ -2308,10 +2512,20 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     z-index: 1;
     background-color: black;
     color: white;
-    width: 25vw;
-    
-    
+    width: 25%;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-title{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        color: black;
+        background-color: white;
+        border-bottom: 2px solid black;
+
+    }
+}  
+
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-title{
     position: sticky;
     top: 87px;
@@ -2324,6 +2538,19 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     
     width:25vw;
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-title{
+        position: sticky;
+        top: 117px;
+        direction: rtl;
+        font-weight: 500;
+        border-bottom: 2px solid black;
+        background-color: red;
+        
+        width:100%;
+    }
+}  
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content{
     display: flex;
     margin-right: 25vw;
@@ -2335,12 +2562,30 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content div{
     flex: 1 1 0px;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content{
+        margin-right: 0vw;  
+        
+    }
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content div{
+        /* max-width: 9ch; */
+        /* overflow-x: hidden; */
+    }
+
+}    
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content div p{
     border-top: 2px solid black;
     background-color: white;
 
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time1-content div p{
+        border-bottom: 2px solid black;
+        border-top: 0px solid black;
+    
+    }
 
+}  
 
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-title{
     position: sticky;
@@ -2353,6 +2598,20 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: transparent;
     width:25vw;
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-title{
+        position: sticky;
+        top: 115px;
+        direction: rtl;
+        font-weight: 500;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: red;
+        
+        width:100%;
+    }
+}  
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content{
     display: flex;
     margin-right: 25vw;
@@ -2363,13 +2622,31 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content div{
     flex: 1 1 0px;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content{
+        margin-right: 0vw;  
+        
+    }
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content div{
+        /* max-width: 9ch; */
+        /* overflow-x: hidden; */
+    }
+
+}    
 
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content div p{
     border-top: 2px solid black;
     background-color: white;
 
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time2-content div p{
+        border-bottom: 2px solid black;
+        border-top: 0px solid black;
+    
+    }
 
+}  
 
 
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-title{
@@ -2384,6 +2661,20 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     width:25vw;
 
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-title{
+        position: sticky;
+        top: 115px;
+        direction: rtl;
+        font-weight: 500;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: red;
+        
+        width:100%;
+    }
+}  
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content{
     display: flex;
     margin-right: 25vw;
@@ -2394,12 +2685,30 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div{
     flex: 1 1 0px;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content{
+        margin-right: 0vw;  
+        
+    }
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div{
+        /* max-width: 9ch; */
+        /* overflow-x: hidden; */
+    }
 
+}   
 .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div p{
     border-top: 2px solid black;
     background-color: white;
 
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div p{
+        border-bottom: 2px solid black;
+        border-top: 0px solid black;
+    
+    }
+
+}  
 
 
 
@@ -2409,6 +2718,17 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color: white;
     width: 25vw;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-title{
+        width: 100%;
+        position: sticky;
+        top: 87px;
+        color: black;
+        background-color: white;
+        border-top: 2px solid black;
+
+    }
+}  
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-title{
     position: sticky;
     top: 87px;
@@ -2420,6 +2740,20 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: transparent;
     width:25vw;
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-title{
+        position: sticky;
+        top: 115px;
+        direction: rtl;
+        font-weight: 500;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: red;
+        
+        width:100%;
+    }
+}  
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content{
     display: flex;
     margin-right: 25vw;
@@ -2430,10 +2764,29 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content div{
     flex: 1 1 0px;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content{
+        margin-right: 0vw;  
+        
+    }
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div{
+        /* max-width: 9ch; */
+        /* overflow-x: hidden; */
+    }
+
+}   
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content div p{
     border-top: 2px solid black;
     background-color: white;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time1-content div p{
+        border-bottom: 2px solid black;
+        border-top: 0px solid black;
+    
+    }
+
+}  
 
 
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-title{
@@ -2447,6 +2800,20 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: transparent;
     width:25vw;
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-title{
+        position: sticky;
+        top: 115px;
+        direction: rtl;
+        font-weight: 500;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: red;
+        
+        width:100%;
+    }
+} 
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content{
     display: flex;
     margin-right: 25vw;
@@ -2457,12 +2824,30 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content div{
     flex: 1 1 0px;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content{
+        margin-right: 0vw;  
+        
+    }
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div{
+        /* max-width: 9ch; */
+        /* overflow-x: hidden; */
+    }
+
+}   
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content div p{
     border-top: 2px solid black;
     background-color: white;
 
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time2-content div p{
+        border-bottom: 2px solid black;
+        border-top: 0px solid black;
+    
+    }
 
+}  
 
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-title{
     position: sticky;
@@ -2475,6 +2860,20 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     background-color: transparent;
     width:25vw;
 }
+@media only screen and (max-width: 700px) {
+    
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-title{
+        position: sticky;
+        top: 115px;
+        direction: rtl;
+        font-weight: 500;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: red;
+        
+        width:100%;
+    }
+} 
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content{
     display: flex;
     margin-right: 25vw;
@@ -2485,11 +2884,30 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content div{
     flex: 1 1 0px;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content{
+        margin-right: 0vw;  
+        
+    }
+    .site-content-page-bachelor-schedule-content-yearcd-semestera-content-time3-content div{
+        /* max-width: 9ch; */
+        /* overflow-x: hidden; */
+    }
+
+}   
 .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content div p{
     border-top: 2px solid black;
     background-color: white;
 
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-bachelor-schedule-content-yearcd-semesterb-content-time3-content div p{
+        border-bottom: 2px solid black;
+        border-top: 0px solid black;
+    
+    }
+
+}  
 
 
 /* ----------------------------- FIRST DEGREE END ------------------------------- */
