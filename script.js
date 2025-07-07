@@ -6,6 +6,11 @@ clickable.addEventListener("click", () => {
 });
 
 
+target.addEventListener("click", () => {
+    target.classList.toggle("drop-down");
+});
+
+
 // let frame = 0;
 //     const totalFrames = 5;
 //     const box = document.querySelector(".site-content-page-header-body-0");
