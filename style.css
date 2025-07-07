@@ -729,6 +729,12 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-opening-title p{
     align-self: flex-end;
 }
+@media only screen and (max-width: 700px) {
+    .site-content-page-opening-title p{
+        padding-top: 30vh;
+        align-self: center;
+    }
+}
 
 
 .site-content-page-opening-disclaimer{
@@ -833,8 +839,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     font-weight: 800;
     line-height: 90%;
 
-    background-color: darkorchid
-    ;
+    background-color: darkorchid;
     
     color: rgb(255, 255, 255);
 }
@@ -1147,6 +1152,12 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color:rgb(195, 155, 255);
 }
 
+#pastheads-title{
+    background-color: darkorchid;
+    color:white;
+    font-weight: 600;
+
+}
 
 
 
@@ -1235,11 +1246,14 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     color: white;
     z-index: 1;
     max-width: 65ch;
+    padding-left: 7px;
+
 }
 .site-content-page-opening-body-academicplans-body > * > * + * p:nth-child(even){
     background-color:white;
     color: rgb(13, 204, 109);
     max-width: 65ch;
+    padding-left: 7px;
 }
 
 
@@ -1303,6 +1317,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     z-index: -1;
     background-color:rgb(219, 79, 28);
     color: white;
+    padding-left: 7px;
 }
 
 .site-content-page-opening-body-administration-body > div > div + div p:nth-child(even){
@@ -1313,6 +1328,7 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     z-index: -1;
     background-color:white;
     color: rgb(219, 79, 28);
+    padding-left: 7px;
 
 }
 @media only screen and (max-width: 700px) {
@@ -1392,12 +1408,13 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     position:sticky;
     top: 28px;
     display: flex;
-    color: blue;
+    color: rgb(0, 64, 255);
     z-index: 6;
+
 }
 .site-content-page-calendar-year p{
     background-color: white;
-    border-bottom: solid calc(15vw - 27px) blue;
+    border-bottom: solid calc(15vw - 27px) rgb(0, 64, 255);
 }
 @media only screen and (max-width: 700px) {
     .site-content-page-calendar-year{
@@ -2396,10 +2413,11 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     padding-right:20px;
     padding-left:20px;
     padding-top:2px;
+    padding-bottom: 20px;
     max-width: 65ch;
 }
 .site-content-page-bachelor-about-content p + p{
-    padding-top:20px;
+    padding-top:0px;
 }
 
 .site-content-page-bachelor-about-content :last-child {
@@ -2448,8 +2466,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-academicplan div div + div p{
     padding-right:20px;
     padding-left:20px;
-    /* padding-top:12px; */
+    padding-top:15px;
     max-width: 65ch;
+    /* padding-bottom: 20px; */
+
 
 }
 
@@ -2457,22 +2477,33 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 .site-content-page-bachelor-academicplan div div + div p + p{
     padding-right:20px;
     padding-left:20px;
-    /* padding-top:12px; */
+    padding-top:15px;
     max-width: 65ch;
     /* color: blue; */
     /* color:  rgb(255, 89, 0);
     background-color:white */
 }
 
+.site-content-page-bachelor-about-academicplan  div div:last-child {
+    padding-bottom: 7px;
+}
+
 
 
 #academicplan-subtitle{
     color:  rgb(255, 89, 0);
-    background-color:white
+    background-color:white;
+    padding-top: 2px;
     /* font-weight: 600; */
     /* background-color: blue; */
     /* background-color: white;
     color:  rgb(255, 89, 0); */
+    margin-top: 20px;
+}
+#academicplan-subtitle-list-item{
+    padding-top: 2px;
+    padding-right: 45px;
+
 }
 
 
@@ -3249,12 +3280,166 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 /* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
 /* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
 /* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* --------------------------------- FAKE PAGE ---------------------------------- */
+
+
+
+.site-content-page-masters{
+    position: absolute;
+    top: 0px;
+    height: 80vh;
+    width: 100%;
+    background-color: white;
+    z-index: -1;
+    overflow-y: hidden;
+}
+@media only screen and (max-width: 700px) {
+    .site-content-page-masters{
+        height: 30vh;
+    }
+
+
+}  
+
+.rotatingblock{
+    position: absolute;
+    height:28px;
+    width:25%;
+    top:50%;
+    left:50%;
+    animation: move1 2s infinite linear;
+}
+
+.coming-soon{
+    width:50%;
+    position: absolute;
+    top:calc(50% - 28px);
+    left:25%;
+    background-color: black;
+    color: white;
+    padding-left: 7px;
+}
+.block1{
+    background-color: gainsboro;
+    animation: moveblock4 8s infinite ease-in-out;
+
+
+
+}
+.block2{
+    background-color: springgreen;
+    animation: moveblock2 8s infinite ease-in-out;
+}
+.block3{
+    background-color: purple;
+    animation: moveblock3 8s infinite ease-in-out;
+
+}
+
+.block4{
+    background-color: gold;
+    animation: moveblock1 8s infinite ease-in-out;
+    animation-direction:reverse;
+
+}
+.block5{
+    background-color: springgreen;
+    animation: moveblock2 8s infinite ease-in-out;
+    animation-direction:reverse;
+
+
+}
+.block6{
+    background-color: purple;
+    animation: moveblock3 8s infinite ease-in-out;
+    animation-direction:reverse;
+
+}
+
+
+.block7{
+    background-color: gold;
+    animation: moveblock1 8s infinite ease-in-out;
+
+}
+.block8{
+    background-color: gainsboro;
+    animation: moveblock4 8s infinite ease-in-out;
+    animation-direction:reverse;
+
+
+}
+
+.empty-footer{
+    position: fixed;
+    bottom: 0px;
+}
+
+  
+
+
+
+  /* Keyframes for each square's movement */
+  @keyframes moveblock1 {
+    0%   { top: 50%;    left: 50%;}   /* Top */
+    25%  { top: 50%; left: 25%; }   /* Move down */
+    50%  { top: calc(28px + 50%); left: 25%;}  /* Move right */
+    75%  {top: calc(28px + 50%); left: 50%;  }  /* Move up */
+    100% { top: 50%; left: 50%;  }   /* Back to top */
+  }
+  
+  @keyframes moveblock2 {
+    0%  {top: calc(28px + 50%); left: 50%;  }  /* Move up */
+    25%   { top: 50%;    left: 50%;}   /* Top */
+    50%  { top: 50%; left: 25%; }   /* Move down */
+    75%  { top: calc(28px + 50%); left: 25%;}  /* Move right */
+    100%  {top: calc(28px + 50%); left: 50%;  }  /* Move up */
+  }
+  
+  @keyframes moveblock3 {
+    0%  { top: calc(28px + 50%); left: 25%;}  /* Move right */
+    25%  {top: calc(28px + 50%); left: 50%;  }  /* Move up */
+    50%   { top: 50%;    left: 50%;}   /* Top */
+    75%  { top: 50%; left: 25%; }   /* Move down */
+    100%  { top: calc(28px + 50%); left: 25%;}  /* Move right */
+  }
+  @keyframes moveblock4 {
+    0%  { top: 50%; left: 25%; }   /* Move down */
+
+    25%  { top: calc(28px + 50%); left: 25%;}  /* Move right */
+    50%  {top: calc(28px + 50%); left: 50%;  }  /* Move up */
+    75%   { top: 50%;    left: 50%;}   /* Top */
+    100%  { top: 50%; left: 25%; }   /* Move down */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
+/* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
 /* ----------------------------------- FOOTER ----------------------------------- */
 
 .site-footer{
     /* margin-top: 500px; */
     /* background-color: rgb(255, 255, 132); */
-    z-index: 50000;
+    /* z-index: 50000; */
     display: flex;
     width: 100%;
     align-items: end;  
@@ -3272,11 +3457,13 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
         flex-direction: column;
     }
 
+
 }  
 
 .site-footer > div{
     flex: 1 1 0px;
 }
+
 
 .site-footer-title{
     display: flex;
@@ -3292,13 +3479,13 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 .site-footer-links p{
     
-    background-color: blue;
+    background-color: rgb(0, 64, 255);
     color: white;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
     padding-right: 7px;
 }
 .site-footer-links p:hover{
-    color: blue;
+    color: rgb(0, 64, 255);
     background-color: white;
     padding-right: 15px;
 }
@@ -3366,6 +3553,44 @@ input[type=text] {
     }
 
 }  
+@media only screen and (max-width: 700px) {
+    .site-footer{
+        width:100%;
+    }
+    .site-footer > div{
+        flex: auto;
+        flex-wrap: wrsp;
+        /* width: 5%; */
+    }
+    .site-footer-credits{
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .site-footer-credits p{
+    
+        width: 50%;
+    }
+    .site-footer-credits :nth-child(4n + 1){
+        background-color: black;
+        color: white;
+    }
+    .site-footer-credits :nth-child(4n + 4){
+        color: black;
+        background-color: rgb(255, 89, 0);
+    }
+    .site-footer-credits :nth-child(4n + 1){
+        color: black;
+        background-color: rgb(255, 89, 0);
+    }
+    .site-footer-credits :nth-child(4n + 3){
+        background-color: black;
+        color: white;
+    }
+    
+    
+
+}  
 
 
 
@@ -3401,6 +3626,20 @@ input[type=text] {
 /* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
 /* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
 /* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
