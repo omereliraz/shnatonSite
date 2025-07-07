@@ -187,18 +187,19 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     z-index: 1;
 }
 
+
 .site-content-page-header-body-0{
     height: 25vw;
     width: 25vw;
 
-    /* position: absolute; */
+    position: absolute;
     
     background-color: rgb(195, 155, 255);
 
-    /* animation-name: mov0;
+    animation-name: mov0;
     animation-duration: 40s;
     animation-iteration-count: infinite;
-    animation-direction:alternate-reverse; */
+    animation-direction:alternate-reverse;
 }
 
 
@@ -228,10 +229,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     left: 70vw;
     background-color: rgb(0, 64, 255);
 
-    /* animation-name: mov1;
+    animation-name: mov1;
     animation-duration: 40s;
     animation-iteration-count:infinite;
-    animation-direction:alternate; */
+    animation-direction:alternate;
 }
 
 @keyframes mov1 {
@@ -258,10 +259,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
     background-color: rgb(114, 255, 114);
 
-    /* animation-name: mov2;
+    animation-name: mov2;
     animation-duration: 41s;
     animation-iteration-count: infinite;
-    animation-direction:alternate; */
+    animation-direction:alternate;
 }
 
 @keyframes mov2 {
@@ -288,10 +289,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
     background-color: gold;
 
-    /* animation-name: mov3;
+    animation-name: mov3;
     animation-duration: 39s;
     animation-iteration-count: infinite;
-    animation-direction:alternate-reverse; */
+    animation-direction:alternate-reverse;
 
 }
 
@@ -320,10 +321,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     
     background-color: tomato;
 
-    /* animation-name: mov4;
+    animation-name: mov4;
     animation-duration: 42s;
     animation-iteration-count: infinite;
-    animation-direction:alternate; */
+    animation-direction:alternate;
 }
 
 @keyframes mov4 {
@@ -350,10 +351,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     
     background-color: darkcyan;
 
-    /* animation-name: mov5;
+    animation-name: mov5;
     animation-duration: 45s;
     animation-iteration-count: infinite;
-    animation-direction:alternate-reverse; */
+    animation-direction:alternate-reverse;
 }
 
 @keyframes mov5 {
@@ -379,6 +380,10 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
     }
 }
 
+#selected-header-link{
+    background-color: white;
+    color: black;
+}
 
 /* -------------------------------- HEADER END ---------------------------------- */
 /* XOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXOXO */
@@ -2919,9 +2924,106 @@ p::selection, h1::selection, h2::selection, h3::selection, a::selection{
 
 .site-footer{
     /* margin-top: 500px; */
-    background-color: rgb(255, 255, 132);
+    /* background-color: rgb(255, 255, 132); */
     z-index: 5;
+    display: flex;
+    width: 100%;
+    align-items: end;  
+    margin-top: 100px;
 }
+@media only screen and (max-width: 700px) {
+    .site-footer{
+        flex-direction: column;
+    
+    
+    }
+
+}  
+
+.site-footer > div{
+    flex: 1 1 0px;
+}
+
+.site-footer-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  
+
+}
+.site-footer-title p{
+    font-weight: 800;
+    background-color: black;
+    color: white;
+}
+
+.site-footer-links p{
+    
+    background-color: blue;
+    color: white;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding-right: 7px;
+}
+.site-footer-links p:hover{
+    color: blue;
+    background-color: white;
+    padding-right: 15px;
+}
+/* .site-footer-newsletter p:first-child{
+    padding-right: 7px;
+
+    background-color: greenyellow;
+    color: black;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+} */
+.site-footer-newsletter p{
+    padding-right: 7px;
+
+    background-color: gainsboro;
+    color: black;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+}
+.site-footer-newsletter p:last-child:hover{
+    padding-right: 15px;
+
+    background-color: greenyellow;
+    color: black;
+}
+.site-footer-credits :nth-child(even){
+    background-color: black;
+    color: white;
+}
+.site-footer-credits :nth-child(odd){
+    color: black;
+    background-color: red;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 28px;
+    padding: 2px 8px;
+
+    margin: 0px 0;
+    /* box-sizing: border-box; */
+    border: none;
+    /* border: 2px solid black; */
+    font-size: 20px;
+    font-family: "narkiss-tam", sans-serif;
+    border-radius: 0px;
+    outline: none;
+    /* border-top: solid 2px black; */
+    border-bottom: solid 2px black;
+
+}
+
+  input[type=text]:focus{
+
+    border-radius: 0px;
+}
+
+
+
 
 
 
